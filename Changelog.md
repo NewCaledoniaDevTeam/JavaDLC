@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [BETA]
 
+## [0.0.4] - 2020-12-21
+### Added
+- New Pack Icon
+- New Description
+
+### Fixed
+- Hotbar UI
+- fixed the hud
+
 ## [0.0.3] - 2020-12-21
 ### Added
 - change default to normal

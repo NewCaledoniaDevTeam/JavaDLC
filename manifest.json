@@ -1,15 +1,15 @@
 {
     "format_version": 2,
     "header": {
-        "description": "Java DLC for (required) New Caledonia Shader.",
+        "description": "Minecraft Bedrock Texture DLC Design to look like Minecraft Java. New Caledonia Shader Pack Required.",
         "name": "Java DLC",
         "uuid": "7647d467-3169-45a5-a6e3-8e4212eb6297",
-        "version": [0, 0, 3],
+        "version": [0, 0, 4],
         "min_engine_version": [ 1, 14, 0 ]
     },
     "modules": [
         {
-            "description": "Java DLC for (required) New Caledonia Shader.",
+            "description": "Minecraft Bedrock Texture DLC Design to look like Minecraft Java. New Caledonia Shader Pack Required.",
             "type": "resources",
             "uuid": "ed18b8da-8b71-4257-902b-fc0912c6db01",
             "version": [0, 0, 1]

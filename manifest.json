@@ -4,7 +4,7 @@
         "description": "Java DLC for (required) New Caledonia Shader.",
         "name": "Java DLC",
         "uuid": "7647d467-3169-45a5-a6e3-8e4212eb6297",
-        "version": [0, 0, 2],
+        "version": [0, 0, 3],
         "min_engine_version": [ 1, 14, 0 ]
     },
     "modules": [

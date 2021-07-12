@@ -1,5 +1,174 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
 {
   "namespace": "game_world_dx",
+
+  /*//// Dropdown Toggles ////*/
+  
+  "world_gamemode_option": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "createWorldScreen.gameMode.default",
+    "$option_enabled_binding_name": "#world_game_mode_dropdown_enabled",
+    "controls": [
+      {
+        "world_survival_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_survival",
+          "$radio_label_text": "createWorldScreen.gameMode.adventure",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#world_game_mode_radio_adventure",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "world_creative_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_creative",
+          "$radio_label_text": "createWorldScreen.gameMode.survival",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#world_game_mode_radio_survival",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "world_adventure_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#world_game_mode_radio_adventure",
+          "$radio_label_text": "createWorldScreen.gameMode.creative",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#world_game_mode_radio_creative",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  
+  "player_gamemode_option": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "createWorldScreen.gameMode.personal",
+    "$option_enabled_binding_name": "#player_game_mode_dropdown_enabled",
+    "controls": [
+      {
+        "default_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_default",
+          "$radio_label_text": "createWorldScreen.gameMode.adventure",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#player_game_mode_radio_adventure",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "world_survival_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_survival",
+          "$radio_label_text": "createWorldScreen.gameMode.serverDefault",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#player_game_mode_radio_default",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "world_creative_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_creative",
+          "$radio_label_text": "createWorldScreen.gameMode.survival",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#player_game_mode_radio_survival",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "world_adventure_mode_toggle@settings_common_dx.dropdown_radio_200": {
+          "$toggle_state_binding_name": "#player_game_mode_radio_adventure",
+          "$radio_label_text": "createWorldScreen.gameMode.creative",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#player_game_mode_radio_creative",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "permission_option": {
+    "type": "panel",
+    "size": [ 200, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "permissions.title",
+    "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
+    "controls": [
+      {
+        "visitor@settings_common_dx.dropdown_radio_200": {
+					"$toggle_state_binding_name": "#permission_level_radio_visitor",
+					"$radio_label_text": "permissions.level.operator",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_operator",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "member@settings_common_dx.dropdown_radio_200": {
+					"$toggle_state_binding_name": "#permission_level_radio_member",
+					"$radio_label_text": "permissions.level.visitor",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_visitor",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "operator@settings_common_dx.dropdown_radio_200": {
+					"$toggle_state_binding_name": "#permission_level_radio_operator",
+					"$radio_label_text": "permissions.level.member",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_member",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Panels ////*/
 
   "title_label@settings_dx.base_label": {
     "text": "createWorldScreen.game.settings",
@@ -19,20 +188,11 @@
           "type": "panel",
           "size": [ 310, 25 ],
           "controls": [
-            {
-              "option_dropdown_0@settings_common_dx.option_dropdown": {
+            { 
+              "world_gamemode_option@game_world_dx.world_gamemode_option": {
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "$option_label": "createWorldScreen.gameMode.default",
-                "$dropdown_content": "world_section.world_game_mode_dropdown_content",
-                "$dropdown_area": "content_area",
-                "$dropdown_name": "world_game_mode_dropdown",
-                "$options_dropdown_toggle_label_binding": "#world_game_mode_dropdown_toggle_label",
-                "$option_enabled_binding_name": "#world_game_mode_dropdown_enabled",
-                "$selection_highlight_offset": [ -2, 1 ],
-                "$selection_highlight_size": [ "100%", "100% + 1px" ],          
-                "$focus_override_right": "FOCUS_OVERRIDE_STOP"
+                "anchor_to": "top_middle"
               }
             }
           ]
@@ -43,26 +203,11 @@
           "type": "panel",
           "size": [ 310, 25 ],
           "controls": [
-            {
-              "option_dropdown_1@settings_common_dx.option_dropdown": {
+            { 
+              "player_gamemode_option@game_world_dx.player_gamemode_option": {
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "ignored": "$is_pregame",
-                "$option_label": "createWorldScreen.gameMode.personal",
-                "$dropdown_content": "world_section.player_game_mode_dropdown_content",
-                "$dropdown_area": "content_area",
-                "$dropdown_name": "player_game_mode_dropdown",
-                "$options_dropdown_toggle_label_binding": "#player_game_mode_dropdown_toggle_label",
-                "$option_enabled_binding_name": "#player_game_mode_dropdown_enabled",
-                "$dropdown_scroll_content_size": [ "100%", "260%" ],
-                "$focus_override_right": "FOCUS_OVERRIDE_STOP",
-                "bindings": [
-                  {
-                    "binding_name": "#player_game_mode_dropdown_visible",
-                    "binding_name_override": "#visible"
-                  }
-                ]
+                "anchor_to": "top_middle"
               }
             }
           ]
@@ -73,21 +218,11 @@
           "type": "panel",
           "size": [ 310, 25 ],
           "controls": [
-            {
-              "option_dropdown_permissions@settings_common_dx.option_dropdown": {
+            { 
+              "permission_option@game_world_dx.permission_option": {
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "ignored": "$education_edition",
-                "$option_label": "permissions.title",
-                "$dropdown_content": "permissions.permission_level_dropdown_content",
-                "$dropdown_area": "content_area",
-                "$dropdown_name": "player_permissions_dropdown",
-                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
-                "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
-                "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
-                "$dropdown_scroll_content_size": [ "100%", "385%" ],
-                "$is_world_settings": true
+                "anchor_to": "top_middle"
               }
             }
           ],
@@ -105,7 +240,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "allow_cheats_toggle@settings_common_dx.option_toggle": {
+              "allow_cheats_toggle@settings_common_dx.option_toggle_200": {
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -127,6 +262,8 @@
           "controls": [
             {
               "gamerules_button@create_world_dx.gamerules_button": {
+                "$unchecked_control": "common_buttons_dx.200_default",
+                "$unchecked_hover_control": "common_buttons_dx.200_hover",
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
@@ -144,13 +281,7 @@
       {
         "options_label@game_world_dx.title_label": {
           "layer": 2,
-          "ignored": "$is_edit_screen"
-        }
-      },
-      {
-        "options_label_edit@edit_world_dx.title_label": {
-          "layer": 2,
-          "ignored": "(not $is_edit_screen)"
+          "ignored": false
         }
       },
       {
@@ -164,8 +295,7 @@
           "anchor_to": "bottom_middle",
           "offset": [ 0, -12 ]
         }
-      },
-      { "bg_world@common_java.screen_background": { "layer": -1 } }
+      }
     ]
   },
 

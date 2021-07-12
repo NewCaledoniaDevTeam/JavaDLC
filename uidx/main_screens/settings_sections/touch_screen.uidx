@@ -1,3 +1,5 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
 {
   "namespace": "touch_dx",
 
@@ -22,8 +24,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "option_toggle_0@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle_0@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "options.invertYAxis",
@@ -33,8 +34,7 @@
               }
             },
             {
-              "option_slider_0@settings_common_dx.option_slider": {
-                "size": [ 150, 20 ],
+              "option_slider_0@settings_common_dx.option_slider_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "$option_label": "#touch_sensitivity_slider_label",
@@ -53,8 +53,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "option_toggle_2@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle_2@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "options.destroyvibration",
@@ -64,8 +63,7 @@
               }
             },
             {
-              "option_toggle_1@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle_1@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "$option_label": "options.autojump",
@@ -83,8 +81,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "option_toggle_4@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle_4@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "options.usetouchpad",
@@ -94,8 +91,7 @@
               }
             },
             {
-              "option_toggle_5@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle_5@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "$option_label": "options.lefthanded",
@@ -113,8 +109,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "option_toggle_6@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle_6@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "options.swapJumpAndSneak",
@@ -124,8 +119,7 @@
               }
             },
             {
-              "hotbar_only_touch_toggle@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "hotbar_only_touch_toggle@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "$option_label": "options.hotbarOnlyTouch",
@@ -143,8 +137,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "option_slider_1@settings_common_dx.option_slider": {
-                "size": [ 150, 20 ],
+              "option_slider_1@settings_common_dx.option_slider_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "#button_size_slider_label",
@@ -161,14 +154,6 @@
     ]
   },
   
-  /*//// Scrolling Panel ////*/
-  
-  "touch_scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "$scroll_view_port_size": [ 324, "100%" ],
-    "layer": 2,
-    "$scrolling_content": "touch_dx.touch_stack_panel"
-  }, 
-  
   /*//// Screen ////*/
   
   "touch_label@settings_dx.base_label": {
@@ -176,10 +161,10 @@
     "offset": [ 0, 4 ]
   },
 
-  "touch_screen_panel@common_menus_dx.java_menu_panel_template": {
+  "touch_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
     "$top_content": "touch_dx.touch_label",
     "$top_content_size": [ "100%", 32 ],
-    "$middle_content": "touch_dx.touch_scrolling_panel",
+    "$scrolling_content": "touch_dx.touch_stack_panel",
     "$bottom_content": "touch_dx.touch_bottom_content"
   },
 
@@ -191,8 +176,7 @@
     "size": [ 310, 20 ],
     "controls": [
       {
-        "reset_button@settings_common_dx.action_button": {
-          "size": [ 150, 20 ],
+        "reset_button@common_buttons_dx.main_button_150": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "enabled": "$is_pregame",

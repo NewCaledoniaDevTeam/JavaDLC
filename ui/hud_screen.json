@@ -1,0 +1,8 @@
+{
+    "hud_content": {
+        "controls": [
+            { "root_panel@hud_dx.root_panel": {} },
+            { "camera_renderer@hud.camera_renderer": {} }
+        ]
+    }
+}

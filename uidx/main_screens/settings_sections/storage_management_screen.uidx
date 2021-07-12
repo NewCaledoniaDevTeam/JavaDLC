@@ -1,3 +1,5 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
 {
   "namespace": "storage_management_dx",
 
@@ -12,8 +14,7 @@
       {
         "stack_panel":{
           "type": "stack_panel",
-          "min_size": [ 220, "100%c" ],
-          "max_size": [ 310, "100%c" ],
+          "size": [ 220, "100%c" ],
           "orientation": "vertical",
           "factory": {
             "name": "category_items",
@@ -49,6 +50,8 @@
     "type": "stack_panel",
     "orientation": "vertical",
     "size": [ "100%", "default" ],
+    "$size_binding_type": "global",
+    "$size_binding_collection": "",
     "controls":[
       {
         "padding_0":{
@@ -58,11 +61,11 @@
       },
       {
         "main_item_toggle@common_toggles.light_ui_toggle": {
-          "anchor_from":"top_middle",
-          "anchor_to": "top_middle",
-          "$unchecked_control": "common_buttons_dx.default",
+          "anchor_from":"top_left",
+          "anchor_to": "top_left",
+          "$unchecked_control": "common_buttons_dx.200_default",
           "$checked_control": "storage_management_dx.default_checked",
-          "$unchecked_hover_control": "common_buttons_dx.hover",
+          "$unchecked_hover_control": "common_buttons_dx.200_hover",
           "$checked_hover_control": "storage_management_dx.hover_checked",
           "$button_content": "storage_management_dx.button_label_storage",
 
@@ -70,7 +73,7 @@
 
           "$size_text": "('#' + $panel_prefix + _size)",
 
-          "size": [ "100%", 20 ],
+          "size": [ 200, 20 ],
           "$button_content_size": [ "100% - 6px", "100%" ],
           "$button_type_panel": "storage_management.main_item_text",
 
@@ -127,11 +130,11 @@
     ]
   },
 
-  "default_checked@common_buttons_dx.default": {
+  "default_checked@common_buttons_dx.200_default": {
     "$is_checked": true
   },
 
-  "hover_checked@common_buttons_dx.hover": {
+  "hover_checked@common_buttons_dx.200_hover": {
     "$is_checked": true
   },
 
@@ -144,10 +147,10 @@
     "$is_checked|default": false,
     "layer": 2,
     "controls": [
-      { "button_label@common_buttons_dx.button_label_for_options": { } },
-      { "separator@common_buttons_dx.button_label_for_options": { "text": ": " } },
+      { "button_label@common_buttons_dx.button_label": { "text": "$option_label" } },
+      { "separator@common_buttons_dx.button_label": { "text": ": " } },
       { 
-        "button_label_content_name@common_buttons_dx.button_label_dropdown_binding": {
+        "button_label_content_name@common_buttons_dx.button_label": {
           "text": "$size_text",
           "bindings":[
             {
@@ -166,8 +169,8 @@
           "type": "panel",
           "size": [ 12, 8 ],
           "controls": [
-            { "right_arrow_icon@common_buttons_dx.right_arrow_icon": { "ignored": "$is_checked" } },
-            { "down_arrow_icon@common_buttons_dx.down_arrow_icon": { "ignored": "(not $is_checked)" } }
+            { "arrow_right_iconn@java_gui_common.arrow_right_icon": { "ignored": "$is_checked" } },
+            { "arrow_down_icon@java_gui_common.arrow_down_icon": { "ignored": "(not $is_checked)" } }
           ]
         }
       }
@@ -250,7 +253,7 @@
         "content_toggle@common.toggle": {
           "size": [ "100%" , 36 ],
           
-          "$unchecked_control": "common_dx.null_panel",
+          "$unchecked_control": "common.empty_panel",
           "$checked_control": "storage_management_dx.checked",
           "$unchecked_hover_control": "storage_management_dx.hover",
           "$checked_hover_control": "storage_management_dx.checked_hover",
@@ -737,7 +740,6 @@
     "type": "panel",
     "size": [ "100%", "100%" ],
     "layer": 12,
-    "$ignore_select_button": true,
     "controls":[
       {
         "main_label@storage_management.common_label":{
@@ -774,9 +776,12 @@
     "controls": [
       {
         "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
+          "size": [ 32, 32 ],
+          "offset": [ 2, 2 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
           "layer": 9,
-          "$ignore_select_button|default": false,
-          "ignored": "$ignore_select_button"
+          "ignored": true
         }
       }
     ]
@@ -794,9 +799,12 @@
     "controls": [
       {
         "java_menu_select_grid@java_gui_common.java_menu_select_grid": {
+          "size": [ 32, 32 ],
+          "offset": [ 2, 2 ],
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
           "layer": 9,
-          "$ignore_select_button|default": false,
-          "ignored": "$ignore_select_button"
+          "ignored": true
         }
       },
       { "checkbox_image@storage_management_dx.checkbox_image": { } }
@@ -807,7 +815,7 @@
     "type": "image",
     "layer": 14,
     "alpha": 0.5,
-    "texture": "textures/uidx/white",
+    "texture": "textures/uidx/global/white",
     "size": [ "100%-2px", "100%-2px" ],
     "bindings":[
       {
@@ -818,14 +826,6 @@
   },
 
   /*//// Panels ////*/
-  
-  "scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "$scroll_view_port_size": [ "100%", "100%" ],
-    "$scroll_view_port_size_touch": [ "100%", "100%" ],
-    "layer": 2,
-    "$scroll_bar_contained": false,
-    "$scrolling_content": "storage_management_dx.storage_main_panel"
-  },
 
   "storage_management_middle_content": {
     "type": "stack_panel",
@@ -845,8 +845,10 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "$bg_middle": "java_gui_common.options_background_middle",
-          "$middle_content": "storage_management_dx.scrolling_panel",
           "clips_children": true,
+          "$middle_clips_children": true,
+          "$scroll_bar_contained": false,
+          "$scrolling_content": "storage_management_dx.storage_main_panel",
           "controls": [
             { "middle_panel@common_menus_dx.middle_panel": { "layer": 6 } },
             { "bg@$bg_middle": { "layer": 4 } }
@@ -868,12 +870,28 @@
           "controls": [
             {
               "multiselect_button@common.toggle": {
+                "$toggle_off_text": "options.off",
+                "$toggle_on_text": "options.on",
+                "$is_toggle_alt": false,
+                "$toggle_size": [ "100%", 20 ],
+
                 "size": [ 120, 20 ],
-                "$unchecked_control": "common_buttons_dx.default",
-                "$checked_control": "settings_common_dx.checked_control",
-                "$unchecked_hover_control": "common_buttons_dx.hover",
-                "$checked_hover_control": "settings_common_dx.checked_control_hover",
-                "$button_content": "common_buttons_dx.button_label_toggle",
+
+                "$unchecked_control": "settings_common_dx.toggle_unchecked",
+                "$checked_control": "settings_common_dx.toggle_checked",
+                "$unchecked_hover_control": "settings_common_dx.toggle_unchecked_hover",
+                "$checked_hover_control": "settings_common_dx.toggle_checked_hover",
+                
+                "$unchecked_locked_control": "settings_common_dx.toggle_unchecked_locked",
+                "$unchecked_locked_hover_control": "settings_common_dx.toggle_unchecked_locked",
+                "$checked_locked_control": "settings_common_dx.toggle_checked_locked",
+                "$checked_locked_hover_control": "settings_common_dx.toggle_checked_locked",
+
+                "$toggle_texture_default": "common_buttons_dx.120_default",
+                "$toggle_texture_hover": "common_buttons_dx.120_hover",
+                "$toggle_texture_locked": "common_buttons_dx.120_locked",
+
+                "$button_content": "settings_common_dx.button_label_with_value",
                 "$option_label": "gui.select",
                 "$toggle_name": "toggle.enableMultiselect"
               }
@@ -885,7 +903,7 @@
                 "size": [ 120, 20 ],
                 "controls": [
                   {
-                    "delete_button@common_buttons_dx.main_button": {
+                    "delete_button@common_buttons_dx.main_button_120": {
                       "size": [ 120, 20 ],
                       "$pressed_button_name": "button.deleteResources",
                       "$button_text": "storageManager.multiselectDelete",
@@ -911,6 +929,9 @@
             { "panel_1": { "type": "panel", "size": [ "100%", "fill" ] } },
             {
               "null_navigation_tab@settings_dx.null_navigation_tab": {
+                "$unchecked_control": "common_buttons_dx.120_default",
+                "$unchecked_hover_control": "common_buttons_dx.120_hover",
+
                 "size": [ 120, 20 ],
                 "layer": 4
               }

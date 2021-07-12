@@ -6,6 +6,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [BETA]
 
+## [0.0.5] - 2021-07-11
+## Added
+- Star Wars Subpacks
+
+### Removed
+- Character Editor
+- Realms Settings and Inviation
+
+### Fixed
+- Add Server Button
+- Main Menu Button (Mostly Windows 10)
+- RTX is only visible to windows
+- Scoreboard
+- Dropdown is place with toggles
+- All bugs in the GUI are fixed
+- New Code
+
 ## [0.0.4] - 2020-12-21
 ### Added
 - New Pack Icon

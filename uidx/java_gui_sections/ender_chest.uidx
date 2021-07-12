@@ -1,7 +1,7 @@
 {
   "namespace": "ender_chest_java_dx",
 
-  "ender_chest_base@java_gui_common.crisxolt_image_panel": {
+  "ender_chest_base@java_gui_common._image_panel": {
     "$texture": "assets/minecraft/textures/gui/container/ender_chest",
     "$uv_size": [ 176, 222 ]
   },

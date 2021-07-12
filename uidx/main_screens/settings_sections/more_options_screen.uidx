@@ -1,5 +1,45 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
 {
   "namespace": "more_options_dx",
+
+  /*//// Dropdown Toggles ////*/
+
+  "ui_profile_option": {
+    "type": "panel",
+    "size": [ 310, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "options.uiprofile",
+    "controls": [
+      {
+        "classic@settings_common_dx.dropdown_radio_310": {
+          "$toggle_state_binding_name": "#ui_profile_radio_classic",
+          "$radio_label_text": "options.uiprofile.pocket",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#ui_profile_radio_pocket",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "pocket@settings_common_dx.dropdown_radio_310": {
+          "$toggle_state_binding_name": "#ui_profile_radio_pocket",
+          "$radio_label_text": "options.uiprofile.classic",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#ui_profile_radio_classic",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
 
   /*//// Stack panels ////*/
   
@@ -19,8 +59,8 @@
           "ignored": "(not $supports_user_configured_safezone or (not $is_pregame))",
           "controls": [
             {
-              "setup_safe_zone_button@settings_common_dx.action_button": {
-                "size": [ "100%", 20 ],
+              "setup_safe_zone_button@common_buttons_dx.main_button_310": {
+                "size": [ 310, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "$pressed_button_name": "setup_safe_zone_button",
@@ -53,8 +93,8 @@
           "size": ["100%", 25 ],
           "controls": [
             {
-              "hud_opacity_slider@settings_common_dx.option_slider": {
-                "size": [ "100%", 20 ],
+              "hud_opacity_slider@settings_common_dx.option_slider_310": {
+                "size": [ 310, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "$option_label": "#interface_opacity_slider_label",
@@ -77,8 +117,8 @@
           "ignored": "(not $can_splitscreen)",
           "controls": [
             {
-              "splitscreen_hud_opacity_slider@settings_common_dx.option_slider": {
-                "size": [ "100%", 20 ],
+              "splitscreen_hud_opacity_slider@settings_common_dx.option_slider_310": {
+                "size": [ 310, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
                 "$option_label": "#splitscreen_interface_opacity_slider_label",
@@ -101,20 +141,7 @@
           "size": ["100%", 25 ],
           "enabled": "(not $console_edition)",
           "controls": [
-            {
-              "ui_profile_dropdown@settings_common_dx.option_dropdown": {
-                "size": [ "100%", 20 ],
-                "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "$option_label": "options.uiprofile",
-                "$dropdown_content": "general_section.ui_profile_dropdown_content",
-                "$dropdown_area": "content_area",
-                "$dropdown_name": "ui_profile_dropdown",
-                "$option_enabled_binding_name": "#ui_profile_dropdown_enabled",
-                "$options_dropdown_toggle_label_binding": "#ui_profile_dropdown_toggle_label",
-                "$dropdown_scroll_content_size": [ "100%", "200%" ]
-              }
-            }
+            { "ui_profile_dropdown@more_options_dx.ui_profile_option": { } }
           ]
         }
       },
@@ -230,14 +257,6 @@
     ]
   },
 
-  /*//// Scrolling Panel ////*/
-  
-  "scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "$scroll_view_port_size": [ 324, "100%" ],
-    "layer": 2,
-    "$scrolling_content": "more_options_dx.panel_cotent"
-  },
-
   /*//// Screen ////*/
   
   "more_options_label@settings_dx.base_label": {
@@ -245,9 +264,9 @@
     "offset": [ 0, 4 ]
   },
 
-  "more_options_screen_panel@common_menus_dx.java_menu_panel_template": {
+  "more_options_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
     "$top_content": "more_options_dx.more_options_label",
-    "$middle_content": "more_options_dx.scrolling_panel",
+    "$scrolling_content": "more_options_dx.panel_cotent",
     "$bottom_content": "more_options_dx.done_panel"
   },
 
@@ -256,6 +275,8 @@
     "controls": [
       {
         "more_options_done_button@settings_dx.null_navigation_tab": {
+          "$unchecked_control": "common_buttons_dx.200_default",
+          "$unchecked_hover_control": "common_buttons_dx.200_hover",
           "size": [ 200, 20 ],
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",

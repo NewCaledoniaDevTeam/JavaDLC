@@ -1,6 +1,6 @@
 ﻿{
-  "start_screen": {
-    "$screen_content": "start_dx.center_screen",
-    "$screen_bg_content": "start_dx.full_screen"
-  }
+    "start_screen": {
+        "$screen_content": "start_dx.center_screen",
+        "$screen_bg_content": "start_dx.full_screen"
+    }
 }

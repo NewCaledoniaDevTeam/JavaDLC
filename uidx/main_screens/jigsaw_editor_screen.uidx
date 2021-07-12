@@ -17,8 +17,8 @@
         }
       },
       {
-        "data_toggle@settings_common_dx.option_toggle": {
-          "$only_bindings": true,
+        "data_toggle@settings_common_dx.option_toggle_240": {
+          "$only_value": true,
           "anchor_from": "top_right",
           "anchor_to": "top_right",
           "size": [ 240, 20 ],
@@ -63,7 +63,10 @@
           "max_length": 40,
           "$text_edit_box_label_size": [ "default", 10 ],
           "$text_box_name": "$data_text_box_name",
-          "$text_edit_box_content_binding_name": "$data_text_box_value"
+          "$text_edit_box_content_binding_name": "$data_text_box_value",
+          "controls": [
+            { "custom_panel@common_dx.custom_text_edit_panel": { } }
+          ]
         }
       }
     ]
@@ -74,6 +77,7 @@
     "size": [ 308, 230 ],
     "anchor_from": "top_middle",
     "anchor_to": "top_middle",
+    "$option_binding_name": "unset",
     "controls": [
       {
         "target_pool_title_and_edit@jigsaw_editor_dx.data_item_title_and_edit": {
@@ -108,7 +112,7 @@
         }
       },
       {
-        "joing_type_title_and_toggle@jigsaw_editor_dx.data_item_title_and_toggle": {
+        "joint_type_title_and_toggle@jigsaw_editor_dx.data_item_title_and_toggle": {
           "offset": [ 0, 150 ],
           "$data_title": "jigsaw.title.joint_type",
           "$toggle_name": "toggle.joint_type_toggle,",
@@ -116,7 +120,7 @@
         }
       },
       {
-        "done_button@common_buttons_dx.main_button": {
+        "done_button@common_buttons_dx.main_button_150": {
           "size": [ 150, 20 ],
           "anchor_from": "bottom_left",
           "anchor_to": "bottom_left",
@@ -125,7 +129,7 @@
         }
       },
       {
-        "cancel_button@common_buttons_dx.main_button": {
+        "cancel_button@common_buttons_dx.main_button_150": {
           "size": [ 150, 20 ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",

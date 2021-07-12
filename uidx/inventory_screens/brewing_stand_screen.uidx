@@ -169,7 +169,7 @@
     "$background_images": "java_gui_common.cell_image",
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
-      { "brewing_label@brewing_stand.brewing_label": { "offset": [ 0, 5 ] } },
+      { "brewing_label@brewing_stand.brewing_label": { "offset": [ 0, 5 ], "color": "$vdx_container_title_text_color" } },
       { "brewing_fuel_slot@brewing_stand_dx.brewing_fuel_slot": { } },
       { "brewing_input_slot@brewing_stand_dx.brewing_input_slot": { } },
       { "brewing_output_slots@brewing_stand_dx.brewing_output_slots": { } },
@@ -179,7 +179,7 @@
     ]
   },
 
-  "brewing_stand_panel@common.root_panel": {
+  "brewing_stand_panel@common_dx.root_panel": {
     "controls": [
       { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_brewing_stand@brewing_stand_java_dx.dialog_bg_brewing_stand": { "layer": 1 } },
@@ -199,7 +199,7 @@
     "type": "panel",
     "$slot_selected_texture": "",
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
-    "$item_lock_cell_texture": "textures/uidx/cell_image_lock",
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
       { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
@@ -212,7 +212,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { } },
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
   },

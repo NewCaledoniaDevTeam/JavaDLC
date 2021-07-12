@@ -13,7 +13,7 @@
     "text": "sign.edit"
   },
 
-  "classic_done_button@common_buttons_dx.main_button": {
+  "classic_done_button@common_buttons_dx.main_button_200": {
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "layer": 4,

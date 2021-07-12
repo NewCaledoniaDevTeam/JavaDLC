@@ -1,135 +1,156 @@
 ﻿##  Start
-menu.play=§fPlay Game
-menu.options=§fOptions...
-menu.quit=§fQuit Game
-menu.store=§fMinecraft Marketplace
+menu.play§fPlay Game
+menu.options§fOptions...
+menu.quit§fQuit Game
+menu.store§fMinecraft Marketplace
 
 ##  Accessibility Settings
-options.enableChatTextToSpeech=§fTTS For Chat
-options.enableAutoPlatformTextToSpeech=§fTTS with Device
-options.enableUITextToSpeech=§fUI Screen Reader
-options.enableOpenChatMessage=§fOpen Chat Message
+options.enableChatTextToSpeech§fTTS For Chat
+options.enableAutoPlatformTextToSpeech§fTTS with Device
+options.enableUITextToSpeech§fUI Screen Reader
+options.enableOpenChatMessage§fOpen Chat Message
 
 ##  Video Settings
-options.graphics.fancy.tooltip=§fFancy graphics balances performance and quality for the majority of machines. Weather, clouds and particles may not appear behind translucent blocks or water.
-options.graphics.fast.tooltip=§fFast graphics reduces the amount of visible rain and snow. Transparency effects are disabled for various blocks such as tree-leaves.
+options.graphics.fancy.tooltip§fFancy graphics balances performance and quality for the majority of machines. Weather, clouds and particles may not appear behind translucent blocks or water.
+options.graphics.fast.tooltip§fFast graphics reduces the amount of visible rain and snow. Transparency effects are disabled for various blocks such as tree-leaves.
 
-options.vsync=§fUse VSync
-options.vsync.off=§fOFF
-options.vsync.on=§fON
-options.vsync.adaptive=§fAdaptive
+options.vsync§fUse VSync
+options.vsync.off§fOFF
+options.vsync.on§fON
+options.vsync.adaptive§fAdaptive
 
-options.renderClouds=§fClouds
+options.renderClouds§fClouds
 
-options.maxFramerate=§fMax Framerate
+options.maxFramerate§fMax Framerate
 
-options.fov.toggle=§fFOV Can Be Altered
+options.fov.toggle§fFOV Can Be Altered
 
-options.thirdperson=§fPerspective
-options.thirdperson.firstperson=§f1st Person
-options.thirdperson.thirdpersonback=§f3rd Person Back
-options.thirdperson.thirdpersonfront=§f3rd Person Front
+options.thirdperson§fPerspective
+options.thirdperson.firstperson§f1st Person
+options.thirdperson.thirdpersonback§f3rd Person Back
+options.thirdperson.thirdpersonfront§f3rd Person Front
 
 ##  Packs
-pack.available.title=§lAvailable
-pack.selected.title=§lSelected
+pack.available.title§f§lAvailable
+pack.selected.title§f§lSelected
 
-resourcePack.title=§fSelect Resource Packs
-dataPack.title=§fSelect Data Packs
+resourcePack.title§fSelect Resource Packs
+behaviorPack.title§fSelect Behavior Packs
 
-selectWorld.resourcePack=§fResource
-selectWorld.dataPack=vData
+selectWorld.resourcePack§fResource
+selectWorld.behaviorPack§fBehavior
 
-pack.resources.dropInfo=§fDrag and drop files into "resource_packs" folder directory to add Packs
-pack.data.dropInfo=§fDrag and drop files into "behavior_packs" folder directory to add Packs
+pack.resources.dropInfo§fDrag and drop files into "resource_packs" folder directory to add Packs
+pack.behavior.dropInfo§fDrag and drop files into "behavior_packs" folder directory to add Packs
+
+## Structure Editor
+
+structure_block.position§fRelative Position
+structure_block.size§fStructure Size
+structure_block.integrity_and_seed§fStructure Integrity and Seed
+
+structure_block.mode_info.save§fSave Mode - Write to File
+structure_block.mode_info.load§fLoad mode - Load from File
+structure_block.mode_info.export§f3D Export mode - Exports to 3D File
+
+structure_block.mode.export§fExport
+
+structure_block.button.save§fSAVE
+structure_block.button.load§fLOAD
+structure_block.button.export§fEXPORT
+
+structure_block.save_to_disk§fTo Disk
+structure_block.save_to_memory§fIn Memory
 
 ##  Recipe Book
-gui.recipebook.search_hint=§oSearch...
-gui.recipebook.toggleRecipes.all=§fShowing all
-gui.recipebook.toggleRecipes.craftable=§fShowing craftable
-gui.recipebook.toggleRecipes.smeltable=§fShowing smeltable
-gui.recipebook.toggleRecipes.blastable=§fShowing blastable
-gui.recipebook.toggleRecipes.smokable=§fShowing smokable
+gui.recipebook.search_hint§f§oSearch...
+gui.recipebook.toggleRecipes.all§fShowing all
+gui.recipebook.toggleRecipes.craftable§fShowing craftable
+gui.recipebook.toggleRecipes.smeltable§fShowing smeltable
+gui.recipebook.toggleRecipes.blastable§fShowing blastable
+gui.recipebook.toggleRecipes.smokable§fShowing smokable
 
 ## Creative
-inventory.binSlot=§fDestroy Item
+inventory.binSlot§fDestroy Item
 
 ##  Trade v2
-merchant.deprecated=§fVillagers restock up to two times per day
+merchant.deprecated§fVillagers restock up to two times per day
 
 ##  Worlds
-selectWorld.tooltip.beta=§fDon't forget to backup this world before you load it in this beta.
+selectWorld.tooltip.beta§fDon't forget to backup this world before you load it in this beta.
 
 ##  Realms
-mco.selectServer.popup=§fRealms is a safe, simple way to enjoy an online Minecraft world with up to ten friends at a time.   It supports loads of minigames and plenty of custom worlds! Only the owner of the realm needs to pay.
+mco.selectServer.popup§fRealms is a safe, simple way to enjoy an online Minecraft world with up to ten friends at a time.   It supports loads of minigames and plenty of custom worlds! Only the owner of the realm needs to pay.
 
 ##  Toggle OFF/ON
-options.off=§fOFF
-options.on=§fON
+options.off§fOFF
+options.on§fON
 
 ##  Realms
-mco.invites.title=§fPending Invites
-mco.invites.pending=§fNew invites!
-mco.invites.nopending=§fNo pending invites!
-mco.invites.button.accept=§fAccept
-mco.invites.button.reject=§fReject
-
-## Profile Screen
-profile.user=Mountain Top
-profile.connected=Connected
+mco.invites.title§fPending Invites
+mco.invites.pending§fNew invites!
+mco.invites.nopending§fNo pending invites!
+mco.invites.button.accept§fAccept
+mco.invites.button.reject§fReject
 
 ## Gamerule
-selectWorld.gameRules=§fGame Rules
+selectWorld.allowCommands§fAllow Cheats
+
+selectWorld.gameRules§fGame Rules
   
-editGamerule.title=§fEdit game rules
-editGamerule.default=§fDefault: 
+editGamerule.title§fEdit game rules
+editGamerule.default§fDefault: 
 
-gamerule.doImmediateRespawn=§fRespawn immediately
-gamerule.keepInventory=§fKeep inventory after death
-gamerule.naturalRegeneration=§fRegenerate health
-gamerule.spawnRadius=§fRespawn location radius
-gamerule.doMobSpawning=§fSpawn mobs
-gamerule.doMobSpawning.description=§fSome entities might have separate rules
-gamerule.doEntityDrops=§fDrop entity equipment
-gamerule.doEntityDrops.description=§fControls drops from minecarts (including inventories), item frames, boats, etc.
-gamerule.doMobLoot=§fDrop mob loot
-gamerule.doMobLoot.description=§fControls resource drops, including experience orbs
-gamerule.doTileDrops=§fDrop blocks
-gamerule.doTileDrops.description=§fControls resource drops, including experience orbs
-gamerule.doDaylightCycle=§fAdvance in-game time
-gamerule.doFireTick=§fUpdate fire
-gamerule.doWeatherCycle=§fUpdate weather
-gamerule.randomTickSpeed=§fRandom tick speed rate
+gamerule.doImmediateRespawn§fRespawn immediately
+gamerule.keepInventory§fKeep inventory after death
+gamerule.mobGriefing§fAllow destructive mob actions
+gamerule.naturalRegeneration§fRegenerate health
+gamerule.spawnRadius§fRespawn location radius
+gamerule.doMobSpawning§fSpawn mobs
+gamerule.doMobSpawning.description§fSome entities might have separate rules
+gamerule.doEntityDrops§fDrop entity equipment
+gamerule.doEntityDrops.description§fControls drops from minecarts (including inventories), item frames, boats, etc.
+gamerule.doMobLoot§fDrop mob loot
+gamerule.doMobLoot.description§fControls resource drops, including experience orbs
+gamerule.doTileDrops§fDrop blocks
+gamerule.doTileDrops.description§fControls resource drops, including experience orbs
+gamerule.doDaylightCycle§fAdvance in-game time
+gamerule.doFireTick§fUpdate fire
+gamerule.doWeatherCycle§fUpdate weather
+gamerule.randomTickSpeed§fRandom tick speed rate
 
-gamerule.category.player=§lPlayer
-gamerule.category.mobs=§lMobs
-gamerule.category.spawning=§lSpawning
-gamerule.category.drops=§lDrops
-gamerule.category.updates=§lWorld updates
-gamerule.category.misc=§lMiscellaneous
+gamerule.category.player§f§lPlayer
+gamerule.category.mobs§f§lMobs
+gamerule.category.spawning§f§lSpawning
+gamerule.category.drops§f§lDrops
+gamerule.category.updates§f§lWorld updates
+gamerule.category.misc§f§lMiscellaneous
 
 ##  Raid Texts Input
-raid.name=Raid	#
-raid.progress=Mobs remaining:	#
+raid.name§fRaid	#
+raid.progress§fMobs remaining:	#
 
 ##  Raid Texts Output
-bar.event.raid.name=Raid	#
-bar.event.raid.remaining.2=Raid - Mobs remaining: 2	#
-bar.event.raid.remaining.1=Raid - Mobs remaining: 1	#
-bar.event.raid.remaining.0=Raid - Mobs remaining: 0	#
+bar.event.raid.name§fRaid	#
+bar.event.raid.remaining.2§fRaid - Mobs remaining: 2	#
+bar.event.raid.remaining.1§fRaid - Mobs remaining: 1	#
+bar.event.raid.remaining.0§fRaid - Mobs remaining: 0	#
 
 ##  Audio Settings
+soundCategory.ambient§fAmbient/Environment
+soundCategory.block§fBlocks
+soundCategory.hostile§fHostile Creatures
+soundCategory.master§fMaster Volume
+soundCategory.music§fMusic
+soundCategory.neutral§fFriendly Creatures
+soundCategory.player§fPlayers
+soundCategory.record§fJukebox/Note Blocks
+soundCategory.weather§fWeather
 
-soundCategory.ambient=§fAmbient/Environment
-soundCategory.block=§fBlocks
-soundCategory.hostile=§fHostile Creatures
-soundCategory.master=§fMaster Volume
-soundCategory.music=§fMusic
-soundCategory.neutral=§fFriendly Creatures
-soundCategory.player=§fPlayers
-soundCategory.record=§fJukebox/Note Blocks
-soundCategory.weather=§fWeather
+##  Online Safety
+multiplayerWarning.header§f§lCaution: Third-Party Online Play
+multiplayerWarning.message§fCaution: Online play is offered by third-party servers that are not owned, operated, or supervised by Mojang Studios or Microsoft. During online play, you may be exposed to unmoderated chat messages or other types of user-generated content that may not be suitable for everyone.
+multiplayerWarning.check§fDo not show this screen again
 
-multiplayerWarning.header=§lCaution: Third-Party Online Play
-multiplayerWarning.message=§fCaution: Online play is offered by third-party servers that are not owned, operated, or supervised by Mojang Studios or Microsoft. During online play, you may be exposed to unmoderated chat messages or other types of user-generated content that may not be suitable for everyone.
-multiplayerWarning.check=§fDo not show this screen again
+##  Progress
+vdx.loading.percentage§f%

@@ -238,7 +238,7 @@
 
   /*//// Main Panel ////*/
 
-  "recipe_button_default@java_gui_common.crisxolt_image_panel": {
+  "recipe_button_default@java_gui_common._image_panel": {
     "$texture": "assets/minecraft/textures/gui/recipe_button",
     "$uv_size": [ 20, 18 ]
   },

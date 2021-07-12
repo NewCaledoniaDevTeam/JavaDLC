@@ -1,7 +1,7 @@
 {
   "namespace": "beacon_java_dx",
 
-  "beacon_base@java_gui_common.crisxolt_image_panel": {
+  "beacon_base@java_gui_common._image_panel": {
     "$texture": "assets/minecraft/textures/gui/container/beacon"
   },
   

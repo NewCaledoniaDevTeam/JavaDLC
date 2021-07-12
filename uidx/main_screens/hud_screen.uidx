@@ -343,7 +343,7 @@
     "to": 0
   },
 
-  "jukebox_text@CrisXolt_jukebox_text_dx.rgb_text_panel": {
+  "jukebox_text@_jukebox_text_dx.rgb_text_panel": {
     "size": [ "500%", 10 ],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
@@ -788,7 +788,7 @@
             {
               "boss_health_grid@hud.boss_health_grid": {
                 "size": [ 182, "100%" ],
-                "grid_item_template": "CrisXolt_bars_dx.bar_panel",
+                "grid_item_template": "_bars_dx.bar_panel",
                 "offset": [ 0, 0 ]
               }
             }

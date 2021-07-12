@@ -87,18 +87,12 @@
 
   "crafting_screen": {
     "$screen_content": "crafting_dx.center_screen",
-    "$screen_bg_content": "crafting_dx.full_screen",
-    "$use_loading_bars": false,
-    "$screen_animations": [ ],
-    "$background_animations": [ ]
+    "$screen_bg_content": "crafting_dx.full_screen"
   },
 
   "inventory_screen": {
     "$screen_content": "inventory_dx.center_screen",
-    "$screen_bg_content": "inventory_dx.full_screen",
-    "$use_loading_bars": false,
-    "$screen_animations": [ ],
-    "$background_animations": [ ]
+    "$screen_bg_content": "inventory_dx.full_screen"
   },
   
   "no_coalesce_container_slot_button": {

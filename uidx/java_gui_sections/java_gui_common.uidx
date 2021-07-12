@@ -1,21 +1,23 @@
+
 {
   "namespace": "java_gui_common",
 
   /*//// UV and UV size image panel ////*/
 
-  "crisxolt_image_panel": {
+  "_image_panel": {
     "type": "panel",
     "size": "$uv_size",
-    "$base_anchor_from|default": "top_left",
-    "$base_anchor_to|default": "top_left",
-    "$base_size|default": [ 256, 256 ],
+    "$base_anchor": "top_left",
+    "$base_size": [ 256, 256 ],
     "clips_children": true,
+    "$uv": [ 0, 0 ],
+    "$uv_size": [ "100%", "100%" ],
     "controls": [
       {
         "main_image": {
           "type": "image",
-          "anchor_from": "$base_anchor_from",
-          "anchor_to": "$base_anchor_to",
+          "anchor_from": "$base_anchor",
+          "anchor_to": "$base_anchor",
           "size": "$base_size",
           "offset": "$uv",
           "texture": "$texture"
@@ -66,56 +68,56 @@
   "highlight_slot": {
     "type": "image",
     "layer": 6,
-    "texture": "textures/uidx/highlight_slot",
+    "texture": "textures/uidx/highlight/highlight_slot",
     "size": [ 16, 16 ]
   },
 
   "highlight_slot_red@java_gui_common.highlight_slot": {
     "layer": 0,
-    "texture": "textures/uidx/highlight_slot_red"
+    "texture": "textures/uidx/highlight/highlight_slot_red"
   },
 
   "highlight_slot_output@java_gui_common.highlight_slot": {
-    "texture": "textures/uidx/highlight_slot_output",
+    "texture": "textures/uidx/highlight/highlight_slot_output",
     "size": [ 24, 24 ]
   },
 
   "highlight_slot_output_red@java_gui_common.highlight_slot": {
     "layer": 0,
-    "texture": "textures/uidx/highlight_slot_output_red",
+    "texture": "textures/uidx/highlight/highlight_slot_output_red",
     "size": [ 24, 24 ]
   },
 
   "cell_red_slot": {
     "type": "image",
-    "texture": "textures/uidx/cell_red_slot",
+    "texture": "textures/uidx/highlight/cell_red_slot",
     "size": [ 16, 16 ]
   },
 
   "cell_red_slot_output@java_gui_common.cell_red_slot": {
-    "texture": "textures/uidx/cell_red_slot_output",
+    "texture": "textures/uidx/highlight/cell_red_slot_output",
     "size": [ 24, 24 ]
   },
 
   "cell_red_slot_overlay": {
     "type": "image",
-    "texture": "textures/uidx/cell_red_slot_overlay",
+    "texture": "textures/uidx/highlight/cell_red_slot_overlay",
     "size": [ 16, 16 ]
   },
 
   "cell_red_slot_output_overlay@java_gui_common.cell_red_slot": {
-    "texture": "textures/uidx/cell_red_slot_output_overlay",
+    "texture": "textures/uidx/highlight/cell_red_slot_output_overlay",
     "size": [ 24, 24 ]
   },
 
   "cell_furnace_slot": {
     "type": "image",
-    "texture": "textures/uidx/cell_furnace_slot",
+    "texture": "textures/uidx/highlight/cell_furnace_slot",
     "size": [ 16, 16 ]
   },
 
   "cell_furnace_slot_output@java_gui_common.cell_furnace_slot": {
-    "texture": "textures/uidx/cell_furnace_slot_output",
+    "texture": "textures/uidx/highlight/cell_furnace_slot_output",
     "size": [ 24, 24 ]
   },
 
@@ -213,60 +215,79 @@
   
   "text_input_java": {
     "type": "image",
-    "texture": "textures/uidx/text_input_java",
+    "texture": "textures/uidx/menus/text_input_java",
     "size": [ "100%", "100%" ]
   },
 
   "text_input_java_hover": {
     "type": "image",
-    "texture": "textures/uidx/text_input_java_hover",
-    "$ignore_hover_text|default": true,
-    "size": [ "100%", "100%" ],
-    "controls": [
-      {
-        "hover_text_panel@common_dx.hover_text_panel": {
-          "$hover_text_offset|default": [ -5.5, 10.5 ],
-          "ignored": "$ignore_hover_text"
-        }
-      }
-    ]
+    "texture": "textures/uidx/menus/text_input_java_hover",
+    "size": [ "100%", "100%" ]
   },
 
   "text_input_java_locked": {
     "type": "image",
-    "texture": "textures/uidx/text_input_java_locked",
+    "texture": "textures/uidx/menus/text_input_java_locked",
     "size": [ "100%", "100%" ]
   },
 
   "java_menu_select_grid": {
     "type": "image",
-    "texture": "textures/uidx/java_menu_select_grid",
-    "size": [ 32, 32 ],
-    "offset": [ 2, 2 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "$ignore_hover_grid|default": false,
-    "ignored": "$ignore_hover_grid"
+    "texture": "textures/uidx/menus/java_menu_select_grid",
+    "size": [ 32, 32 ]
   },
 
   /*//// Checkbox ////*/
 
-  "checkbox_unchecked_default@java_gui_common.crisxolt_image_panel": {
-    "$texture": "assets/minecraft/textures/gui/checkbox",
-    "$uv_size": [ 20, 20 ],
-    "$base_size": [ 64, 64 ]
+  "checkbox_unchecked_default": {
+    "type": "image",
+    "texture": "assets/minecraft/textures/gui/checkbox",
+    "size": [ 20, 20 ],
+    "$checkbox_uv|default": [ 0, 0 ],
+    "$checkbox_uv_size|default": [ 0, 0 ],
+    "uv": "$checkbox_uv",
+    "uv_size": "$checkbox_uv_size",
+    "variables": [
+      { "requires": "($checkbox_resolution = 64x)",   "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = 128x)",  "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = 256x)",  "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = 512x)",  "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = 1024x)", "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = 2048x)", "$checkbox_uv_size": [ 640, 640 ] }
+    ]
   },
 
   "checkbox_unchecked_hover@java_gui_common.checkbox_unchecked_default": {
-    "$uv": [ -20, 0 ]
+    "variables": [
+      { "requires": "($checkbox_resolution = 64x)",  "$checkbox_uv": [ 20, 0 ],  "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = 128x)", "$checkbox_uv": [ 40, 0 ],  "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = 256x)", "$checkbox_uv": [ 80, 0 ],  "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = 512x)", "$checkbox_uv": [ 160, 0 ], "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = 1024x)","$checkbox_uv": [ 320, 0 ], "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = 2048x)","$checkbox_uv": [ 640, 0 ], "$checkbox_uv_size": [ 640, 640 ] }
+    ]
   },
 
   "checkbox_checked_default@java_gui_common.checkbox_unchecked_default": {
-    "$uv": [ 0, -20 ]
+    "variables": [
+      { "requires": "($checkbox_resolution = 64x)",  "$checkbox_uv": [ 0, 20 ],  "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = 128x)", "$checkbox_uv": [ 0, 40 ],  "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = 256x)", "$checkbox_uv": [ 0, 80 ],  "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = 512x)", "$checkbox_uv": [ 0, 160 ], "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = 1024x)","$checkbox_uv": [ 0, 320 ], "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = 2048x)","$checkbox_uv": [ 0, 640 ], "$checkbox_uv_size": [ 640, 640 ] }
+    ]
   },
 
   "checkbox_checked_hover@java_gui_common.checkbox_unchecked_default": {
-    "$uv": [ -20, -20 ]
+    "variables": [
+      { "requires": "($checkbox_resolution = 64x)",  "$checkbox_uv": [ 20, 20 ],   "$checkbox_uv_size": [ 20, 20 ] },
+      { "requires": "($checkbox_resolution = 128x)", "$checkbox_uv": [ 40, 40 ],   "$checkbox_uv_size": [ 40, 40 ] },
+      { "requires": "($checkbox_resolution = 256x)", "$checkbox_uv": [ 80, 80 ],   "$checkbox_uv_size": [ 80, 80 ] },
+      { "requires": "($checkbox_resolution = 512x)", "$checkbox_uv": [ 160, 160 ], "$checkbox_uv_size": [ 160, 160 ] },
+      { "requires": "($checkbox_resolution = 1024x)","$checkbox_uv": [ 320, 320 ], "$checkbox_uv_size": [ 320, 320 ] },
+      { "requires": "($checkbox_resolution = 2048x)","$checkbox_uv": [ 640, 640 ], "$checkbox_uv_size": [ 640, 640 ] }
+    ]
   },
 
   /*//// UIDX Buttons ////*/
@@ -589,6 +610,50 @@
     ]
   },
 
+  "world_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = 256x)", "$uidx_buttons_uv":  [ 60, 60 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = 512x)", "$uidx_buttons_uv":  [ 120, 120 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = 1024x)", "$uidx_buttons_uv": [ 240, 240 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = 2048x)", "$uidx_buttons_uv": [ 480, 480 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = 4096x)", "$uidx_buttons_uv": [ 960, 960 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = 8192x)", "$uidx_buttons_uv": [ 1920, 1920 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "world_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = 256x)", "$uidx_buttons_uv":  [ 60, 80 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = 512x)", "$uidx_buttons_uv":  [ 120, 160 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = 1024x)", "$uidx_buttons_uv": [ 240, 320 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = 2048x)", "$uidx_buttons_uv": [ 480, 640 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = 4096x)", "$uidx_buttons_uv": [ 960, 1280 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = 8192x)", "$uidx_buttons_uv": [ 1920, 2560 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "server_default@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = 256x)", "$uidx_buttons_uv":  [ 80, 60 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = 512x)", "$uidx_buttons_uv":  [ 160, 120 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = 1024x)", "$uidx_buttons_uv": [ 320, 240 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = 2048x)", "$uidx_buttons_uv": [ 640, 480 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = 4096x)", "$uidx_buttons_uv": [ 1280, 960 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = 8192x)", "$uidx_buttons_uv": [ 2560, 1920 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
+  "server_hover@java_gui_common.uidx_buttons_base": {
+    "variables": [
+      { "requires": "($uidx_buttons_resolution = 256x)", "$uidx_buttons_uv":  [ 80, 80 ], "$uidx_buttons_uv_size": [ 20, 20 ] },
+      { "requires": "($uidx_buttons_resolution = 512x)", "$uidx_buttons_uv":  [ 160, 160 ], "$uidx_buttons_uv_size": [ 40, 40 ] },
+      { "requires": "($uidx_buttons_resolution = 1024x)", "$uidx_buttons_uv": [ 320, 320 ], "$uidx_buttons_uv_size": [ 80, 80 ] },
+      { "requires": "($uidx_buttons_resolution = 2048x)", "$uidx_buttons_uv": [ 640, 640 ], "$uidx_buttons_uv_size": [ 160, 160 ] },
+      { "requires": "($uidx_buttons_resolution = 4096x)", "$uidx_buttons_uv": [ 1280, 1280 ], "$uidx_buttons_uv_size": [ 320, 320 ] },
+      { "requires": "($uidx_buttons_resolution = 8192x)", "$uidx_buttons_uv": [ 2560, 2560 ], "$uidx_buttons_uv_size": [ 640, 640 ] }
+    ]
+  },
+
   /*//// Fate Client Assets ////*/
 
   "fate_client_default@java_gui_common.uidx_buttons_base": {
@@ -657,5 +722,43 @@
       { "requires": "($uidx_buttons_resolution = 4096x)", "$uidx_buttons_uv": [ 512, 3584 ], "$uidx_buttons_uv_size": [ 256, 256 ] },
       { "requires": "($uidx_buttons_resolution = 8192x)", "$uidx_buttons_uv": [ 1024,7168 ], "$uidx_buttons_uv_size": [ 512, 512 ] }
     ]
+  },
+
+  /*//// Icons ////*/
+  
+  "arrow_down_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 1 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/arrow_down"
+  },
+
+  "arrow_left_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 0 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/arrow_left"
+  },
+
+  "arrow_right_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 0 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/arrow_right"
+  },
+
+  "reset_icon": {
+    "type": "image",
+    "layer": 2,
+    "size": [ 12, 12 ],
+    "offset": [ 0, 0 ],
+    "color": "$text_color",
+    "texture": "textures/uidx/icons/reset"
   }
 }

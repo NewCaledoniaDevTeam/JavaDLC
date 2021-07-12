@@ -1,6 +1,6 @@
 {
-  "structure_editor_screen": {
-    "$screen_content": "structure_editor_dx.structure_editor_content",
-    "$screen_bg_content": "java_gui_common.screen_background"
-  }
+    "structure_editor_screen": {
+        "$screen_content": "structure_editor_dx.structure_editor_content",
+        "$screen_bg_content": "java_gui_common.screen_background"
+    }
 }

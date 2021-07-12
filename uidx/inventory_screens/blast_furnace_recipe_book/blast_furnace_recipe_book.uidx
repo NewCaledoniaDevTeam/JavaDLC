@@ -237,7 +237,7 @@
         }
       },
       {
-        "all_tab_pages@crisxolt_pages_furnace.furnace_recipe_book_tab_pages": {
+        "all_tab_pages@_pages_furnace.furnace_recipe_book_tab_pages": {
           "$tab_page": "all",
           "$number_right": "1",
           "$panel_content": "blast_furnace_pages_dx.all_page_1",
@@ -255,7 +255,7 @@
         }
       },
       {
-        "redstone_tab_pages@crisxolt_pages_furnace.furnace_recipe_book_tab_pages": {
+        "redstone_tab_pages@_pages_furnace.furnace_recipe_book_tab_pages": {
           "$tab_page": "redstone",
           "$number_right": "1",
           "$panel_content": "blast_furnace_pages_dx.redstone_page_1",
@@ -273,7 +273,7 @@
         }
       },
       {
-        "materials_tab_pages@crisxolt_pages_furnace.furnace_recipe_book_tab_pages": {
+        "materials_tab_pages@_pages_furnace.furnace_recipe_book_tab_pages": {
           "$tab_page": "materials",
           "$number_right": "1",
           "$panel_content": "blast_furnace_pages_dx.materials_page_1",

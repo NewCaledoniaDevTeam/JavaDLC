@@ -1,3 +1,5 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
 {
   "namespace": "subscription_dx",
 
@@ -18,14 +20,6 @@
     ]
   },
 
-  /*//// Scrolling Panel ////*/
-  
-  "subscription_scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "$scroll_view_port_size": [ 324, "100%" ],
-    "layer": 2,
-    "$scrolling_content": "subscription_dx.subscription_stack_panel"
-  },
-
   /*//// Screen ////*/
   
   "subscription_label@settings_dx.base_label": {
@@ -33,9 +27,10 @@
     "offset": [ 0, 4 ]
   },
 
-  "subscription_screen_panel@common_menus_dx.java_menu_panel_template": {
+  "subscription_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
     "$top_content": "subscription_dx.subscription_label",
-    "$middle_content": "subscription_dx.subscription_scrolling_panel",
+    "$scroll_view_port_size": [ 324, "100%" ],
+    "$scrolling_content": "subscription_dx.subscription_stack_panel",
     "$bottom_content": "subscription_dx.null_navigation_tab"
   },
   

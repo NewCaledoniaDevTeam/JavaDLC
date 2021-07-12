@@ -1,14 +1,6 @@
 {
-  "book_screen": {
-    "variables": [
-      {
-        "requires": "$desktop_screen",
+    "book_screen": {
         "$screen_content": "book_dx.center_screen",
-        "$screen_bg_content": "book_dx.full_screen",
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
-      }
-    ]
-  }
+        "$screen_bg_content": "book_dx.full_screen"
+    }
 }

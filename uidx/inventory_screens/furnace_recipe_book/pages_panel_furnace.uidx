@@ -1,5 +1,5 @@
 {
-  "namespace": "crisxolt_pages_furnace",
+  "namespace": "_pages_furnace",
 
   /*//// Panels base ////*/
   
@@ -7,7 +7,7 @@
     "type": "panel",
     "controls": [
       {
-        "furnace_page_1@crisxolt_tab_pages.page_1": {
+        "furnace_page_1@_tab_pages.page_1": {
           "$ignore_next_button": "($is_food_pages or $is_materials_pages)"
         }
       },
@@ -25,7 +25,7 @@
           ],
           "controls": [
             {
-              "furnace_page_2@crisxolt_tab_pages.custom_page_2": {
+              "furnace_page_2@_tab_pages.custom_page_2": {
                 "$ignore_next_button": "$is_stone_pages"
               }
             },
@@ -43,7 +43,7 @@
                 ],
                 "controls": [
                   {
-                    "furnace_page_3@crisxolt_tab_pages.custom_page_3": {
+                    "furnace_page_3@_tab_pages.custom_page_3": {
                       "$ignore_next_button": true
                     }
                   }

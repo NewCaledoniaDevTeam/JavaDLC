@@ -1,5 +1,5 @@
 {
-  "namespace": "crisxolt_pages_part_3",
+  "namespace": "_pages_part_3",
   
   /*//// Panels base ////*/
   
@@ -14,7 +14,7 @@
       }
     ],
     "controls": [
-      { "page_11@crisxolt_tab_pages.page_11": { "$ignore_next_button": "$is_items_pages"} },
+      { "page_11@_tab_pages.page_11": { "$ignore_next_button": "$is_items_pages"} },
       {
         "page_12": {
           "type": "panel",
@@ -28,7 +28,7 @@
             }
           ],
           "controls": [
-            { "page_12@crisxolt_tab_pages.page_12": { } },
+            { "page_12@_tab_pages.page_12": { } },
             {
               "page_13": {
                 "type": "panel",
@@ -41,7 +41,7 @@
                   }
                 ],
                 "controls": [
-                  { "page_13@crisxolt_tab_pages.page_13": { } },
+                  { "page_13@_tab_pages.page_13": { } },
                   {
                     "page_14": {
                       "type": "panel",
@@ -54,7 +54,7 @@
                         }
                       ],
                       "controls": [
-                        { "page_14@crisxolt_tab_pages.page_14": { "$ignore_next_button": "$is_construct_pages" } },
+                        { "page_14@_tab_pages.page_14": { "$ignore_next_button": "$is_construct_pages" } },
                         {
                           "page_15": {
                             "type": "panel",
@@ -68,8 +68,8 @@
                               }
                             ],
                             "controls": [
-                              { "page_15@crisxolt_tab_pages.page_15": {} },
-                              { "page_16@crisxolt_pages_part_4.page_16_20": {} }
+                              { "page_15@_tab_pages.page_15": {} },
+                              { "page_16@_pages_part_4.page_16_20": {} }
                             ]
                           }
                         }

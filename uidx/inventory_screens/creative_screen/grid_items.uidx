@@ -1,5 +1,5 @@
 {
-  "namespace": "CrisXolt_grid_items",
+  "namespace": "_grid_items",
 
   /*//// Objects ////*/
 
@@ -20,7 +20,7 @@
     "size": [ 162, 90 ],
     "controls": [
       { 
-        "grid_panel_column_1@CrisXolt_grid_items.grid_panel_rows": {
+        "grid_panel_column_1@_grid_items.grid_panel_rows": {
           "$item_row_1": "$1_1",
           "$item_row_2": "$1_2",
           "$item_row_3": "$1_3",
@@ -33,7 +33,7 @@
         }
       },
       { 
-        "grid_panel_column_2@CrisXolt_grid_items.grid_panel_rows": {
+        "grid_panel_column_2@_grid_items.grid_panel_rows": {
           "$item_row_1": "$2_1",
           "$item_row_2": "$2_2",
           "$item_row_3": "$2_3",
@@ -46,7 +46,7 @@
         }
       },
       { 
-        "grid_panel_column_3@CrisXolt_grid_items.grid_panel_rows": {
+        "grid_panel_column_3@_grid_items.grid_panel_rows": {
           "$item_row_1": "$3_1",
           "$item_row_2": "$3_2",
           "$item_row_3": "$3_3",
@@ -59,7 +59,7 @@
         }
       },
       { 
-        "grid_panel_column_4@CrisXolt_grid_items.grid_panel_rows": {
+        "grid_panel_column_4@_grid_items.grid_panel_rows": {
           "$item_row_1": "$4_1",
           "$item_row_2": "$4_2",
           "$item_row_3": "$4_3",
@@ -72,7 +72,7 @@
         }
       },
       { 
-        "grid_panel_column_5@CrisXolt_grid_items.grid_panel_rows": {
+        "grid_panel_column_5@_grid_items.grid_panel_rows": {
           "$item_row_1": "$5_1",
           "$item_row_2": "$5_2",
           "$item_row_3": "$5_3",
@@ -92,21 +92,21 @@
     "size": [ 162, 18 ],
     "orientation": "horizontal",
     "controls": [
-      { "item_row_1@CrisXolt_grid_items.grid_item_template": { "$grid_position": "$item_row_1" } },
-      { "item_row_2@CrisXolt_grid_items.grid_item_template": { "$grid_position": "$item_row_2" } },
-      { "item_row_3@CrisXolt_grid_items.grid_item_template": { "$grid_position": "$item_row_3" } },
-      { "item_row_4@CrisXolt_grid_items.grid_item_template": { "$grid_position": "$item_row_4" } },
-      { "item_row_5@CrisXolt_grid_items.grid_item_template": { "$grid_position": "$item_row_5" } },
-      { "item_row_6@CrisXolt_grid_items.grid_item_template": { "$grid_position": "$item_row_6" } },
-      { "item_row_7@CrisXolt_grid_items.grid_item_template": { "$grid_position": "$item_row_7" } },
-      { "item_row_8@CrisXolt_grid_items.grid_item_template": { "$grid_position": "$item_row_8" } },
-      { "item_row_9@CrisXolt_grid_items.grid_item_template": { "$grid_position": "$item_row_9" } }
+      { "item_row_1@_grid_items.grid_item_template": { "$grid_position": "$item_row_1" } },
+      { "item_row_2@_grid_items.grid_item_template": { "$grid_position": "$item_row_2" } },
+      { "item_row_3@_grid_items.grid_item_template": { "$grid_position": "$item_row_3" } },
+      { "item_row_4@_grid_items.grid_item_template": { "$grid_position": "$item_row_4" } },
+      { "item_row_5@_grid_items.grid_item_template": { "$grid_position": "$item_row_5" } },
+      { "item_row_6@_grid_items.grid_item_template": { "$grid_position": "$item_row_6" } },
+      { "item_row_7@_grid_items.grid_item_template": { "$grid_position": "$item_row_7" } },
+      { "item_row_8@_grid_items.grid_item_template": { "$grid_position": "$item_row_8" } },
+      { "item_row_9@_grid_items.grid_item_template": { "$grid_position": "$item_row_9" } }
     ]
   },
 
   /*//// Grid Items Pages ////*/
 
-  "page_1@CrisXolt_grid_items.grid_panel_columns": {
+  "page_1@_grid_items.grid_panel_columns": {
     "$1_1": [ 0, 0 ],
     "$1_2": [ 1, 0 ],
     "$1_3": [ 2, 0 ],

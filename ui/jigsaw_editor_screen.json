@@ -1,6 +1,6 @@
 {
-  "jigsaw_editor_screen": {
-    "$screen_content": "jigsaw_editor_dx.jigsaw_editor_content",
-    "$screen_bg_content": "java_gui_common.screen_background"
-  }
+    "jigsaw_editor_screen": {
+        "$screen_content": "jigsaw_editor_dx.jigsaw_editor_content",
+        "$screen_bg_content": "java_gui_common.screen_background"
+    }
 }

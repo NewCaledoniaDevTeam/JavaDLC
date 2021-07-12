@@ -180,6 +180,7 @@
   "tab_with_hover_text": {
     "type": "panel",
     "layer": 6,
+    "$tab_hover_texture|default": "common.empty_panel",
     "controls": [
       { "hover_text_panel@common_dx.hover_text_panel": {} },
       { "texture@$tab_hover_texture": { "anchor_from": "top_left", "anchor_to": "top_left" } }
@@ -255,7 +256,7 @@
   "creative_tab@common_toggles_dx.toggle_panel": {
     "size": [ 28, 28 ],
     "layer": 10,
-    "$unchecked_control": "empty",
+    "$unchecked_control": "common.empty_panel",
     "$unchecked_hover_control": "creative_dx.null_tab_front",
     "$toggle_name": "navigation_tab",
     "$toggle_group_default_selected": "$construction_index",
@@ -465,6 +466,13 @@
                 "property_bag": {
                   "#look_at_cursor": true
                 },
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ],
                 "layer": 10,
                 "anchor_from": "center",
                 "anchor_to": "center"
@@ -553,6 +561,7 @@
       { "dialog_bg_tab_items@creative_inv_java_dx.dialog_bg_tab_items": { "layer": 1 } },
       {
         "creative_label@crafting.creative_label": {
+          "color": "$vdx_container_title_text_color",
           "layer": 4,
           "size": [ 162, 10 ],
           "anchor_from": "top_left",
@@ -576,6 +585,7 @@
       { "dialog_bg_tab_item_search@creative_inv_java_dx.dialog_bg_tab_item_search": { "layer": 1 } },
       {
         "creative_label@crafting.creative_label": {
+          "color": "$vdx_container_title_text_color",
           "layer": 4,
           "size": [ 72, 10 ],
           "text": "itemGroup.search",
@@ -613,7 +623,7 @@
           "layer": 20,
           "bindings": [
             {
-              "binding_name": "(#recipe_book_total_items < 45)",
+              "binding_name": "(#recipe_book_total_items < 46)",
               "binding_name_override": "#visible",
               "binding_type": "collection",
               "binding_collection_name": "recipe_book"
@@ -637,7 +647,7 @@
       {
         "scrolling_panel_bg": {
           "type": "image",
-          "texture": "textures/uidx/white",
+          "texture": "textures/uidx/global/white",
           "ignored": "(not $creative_scroll_viewport_bg)",
           "color": "$creative_scroll_viewport_bg_color",
           "size": "$bg_size",
@@ -782,7 +792,7 @@
         }
       },
       { 
-        "gamepad_helper_select@common_dx.gamepad_helper_select": {
+        "gamepad_helper_select@common_tooltip_dx.gamepad_helper_select": {
           "offset": [ 27, -3 ],
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
@@ -794,7 +804,7 @@
 
   /*//// Main Panel ////*/
 
-  "creative_panel@common.root_panel": {
+  "creative_panel@common_dx.root_panel": {
     "size": [ 195, 136 ],
     "controls": [
       { "close_button_panel@inventory_dx.close_button_panel": { } },

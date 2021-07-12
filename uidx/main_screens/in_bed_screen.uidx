@@ -5,7 +5,7 @@
     "type": "panel",
     "controls": [
       {
-        "chat_button@common_buttons_dx.main_button": {
+        "chat_button@common_buttons_dx.main_button_200": {
           "layer": 1,
           "$button_text": "multiplayer.inBedOpenChat",
           "$pressed_button_name": "button.chat",
@@ -15,7 +15,7 @@
         }
       },
       {
-        "wake_up_button@common_buttons_dx.main_button": {
+        "wake_up_button@common_buttons_dx.main_button_200": {
           "layer": 1,
           "$button_text": "multiplayer.stopSleeping",
           "$pressed_button_name": "button.wake_up_button",

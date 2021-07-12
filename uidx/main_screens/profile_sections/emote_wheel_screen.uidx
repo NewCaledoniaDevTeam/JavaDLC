@@ -139,7 +139,7 @@
           "size": [ "100%", 65 ],
           "controls": [
             {
-              "dressing_room_button@common_buttons_dx.main_button": {
+              "dressing_room_button@common_buttons_dx.main_button_200": {
                 "layer": 1,
                 "$button_text": "emotes.change_emotes",
                 "$pressed_button_name": "button.dressing_room",
@@ -149,7 +149,7 @@
               }
             },
             {
-              "exit_button@common_buttons_dx.main_button": {
+              "exit_button@common_buttons_dx.main_button_200": {
                 "layer": 1,
                 "$button_text": "gui.exit",
                 "$pressed_button_name": "button.menu_exit",

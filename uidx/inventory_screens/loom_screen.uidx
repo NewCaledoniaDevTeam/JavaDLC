@@ -84,15 +84,14 @@
     "size": [ 14, 14 ],
     "$button_ref": "loom_dx.pattern_slot_button",
     "$banner_pattern_ref": "loom_dx.banner_pattern",
-    "$background_images": ""
+    "$background_images": "common.empty_panel"
   },
 
   "scroll_grid_panel": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
-    "$grid_item_template": "loom_dx.pattern_button",
     "controls": [
-      { "grid@loom.scroll_grid": {} }
+      { "grid@loom.scroll_grid": { "$grid_item_template": "loom_dx.pattern_button" } }
     ]
   },
 
@@ -214,6 +213,7 @@
     "controls": [
       {
         "loom_label@loom.loom_label": {
+          "color": "$vdx_container_title_text_color",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "offset": [ 8, 3 ]
@@ -254,7 +254,7 @@
     ]
   },
   
-  "loom_panel@common.root_panel": {
+  "loom_panel@common_dx.root_panel": {
     "controls": [
       { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_loom@loom_java_dx.dialog_bg_loom": { "layer": 1 } },
@@ -274,7 +274,7 @@
     "type": "panel",
     "$slot_selected_texture": "",
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
-    "$item_lock_cell_texture": "textures/uidx/cell_image_lock",
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
       { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
@@ -287,7 +287,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { } },
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
   },

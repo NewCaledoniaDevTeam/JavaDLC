@@ -85,8 +85,7 @@
                     }
                   },
                   {
-                    "online_safety_proceed_button@common_buttons_dx.main_button": {
-                      "size": [ 150, 20 ],
+                    "online_safety_proceed_button@common_buttons_dx.main_button_150": {
                       "anchor_from": "bottom_left",
                       "anchor_to": "bottom_left",
                       "$pressed_button_name": "button.proceed",
@@ -94,8 +93,7 @@
                     }
                   },
                   {
-                    "online_safety_back_button@common_buttons_dx.main_button": {
-                      "size": [ 150, 20 ],
+                    "online_safety_back_button@common_buttons_dx.main_button_150": {
                       "anchor_from": "bottom_right",
                       "anchor_to": "bottom_right",
                       "$pressed_button_name": "button.back",

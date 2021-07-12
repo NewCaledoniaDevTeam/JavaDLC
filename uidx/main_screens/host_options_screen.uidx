@@ -3,7 +3,7 @@
 
   /*//// Buttons Assets ////*/
 
-  "return_from_sub_command_button@chat_dx.small_button": {
+  "return_from_sub_command_button@chat_dx.black_button": {
     "size": [ "100%", 20 ],
     "$button_label_offset": [ 30, 0 ],
     "$button_content": "host_options_dx.button_content",
@@ -48,7 +48,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "host_option_banner@chat_dx.small_button": {
+        "host_option_banner@chat_dx.black_button": {
           "anchor_from": "center",
           "anchor_to": "center",
           "size": [ "100%-2px", 20 ],
@@ -138,7 +138,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "player_banner@chat_dx.small_button": {
+        "player_banner@chat_dx.black_button": {
           "anchor_from": "center",
           "anchor_to": "center",
           "size": [ "100%-2px", 20 ],
@@ -173,10 +173,10 @@
           "anchor_to": "top_middle",
           "size": [ "100%", 20 ],
 
-          "$unchecked_control": "chat_dx.small_button_default",
-          "$checked_control": "chat_dx.small_button_pressed",
-          "$unchecked_hover_control": "chat_dx.small_button_hover",
-          "$checked_hover_control": "chat_dx.small_button_hover",
+          "$unchecked_control": "chat_dx.black_button_default",
+          "$checked_control": "chat_dx.black_button_pressed",
+          "$unchecked_hover_control": "chat_dx.black_button_hover",
+          "$checked_hover_control": "chat_dx.black_button_hover",
 
           "$button_label_offset": [ 10, 0 ],
           "$button_content": "host_options_dx.button_content",
@@ -209,7 +209,7 @@
         }
       },
       {
-        "host_option_button@chat_dx.small_button": {
+        "host_option_button@chat_dx.black_button": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "size": [ "100%", 20 ],
@@ -255,7 +255,7 @@
     "size": [ "100%", 22 ],
     "controls": [
       {
-        "host_option_banner@chat_dx.small_button": {
+        "host_option_banner@chat_dx.black_button": {
           "anchor_from": "top_middle",
           "anchor_to": "top_middle",
           "size": [ "100%", 20 ],

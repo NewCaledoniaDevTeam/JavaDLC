@@ -375,9 +375,7 @@
           "$scroll_view_port_size": [ "100%", "100%" ],
           "$scroll_view_port_size_touch": [ "100%", "100%" ],
           "$scrolling_pane_offset": [ 0, 0 ],
-          "$scroll_track_image_control": "common.null_panel",
-          "$scroll_box_mouse_image_control": "chat_dx.scroll_box",
-          "$scroll_box_touch_image_control": "chat_dx.scroll_box",
+          "$scroll_box_image_control": "chat_dx.scroll_box",
           "$scrolling_content": "mob_effect_dx.mob_effect_grid_panel",
           "$jump_to_bottom_on_update": true,
           "$always_handle_scrolling": true

@@ -1,6 +1,114 @@
 {
   "namespace": "world_advanced_dx",
 
+  /*//// Dropdown Toggles ////*/
+
+  "permission_option": {
+    "type": "panel",
+    "size": [ 220, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "permissions.title",
+    "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
+    "controls": [
+      {
+        "visitor@settings_common_dx.dropdown_radio_220": {
+					"$toggle_state_binding_name": "#permission_level_radio_visitor",
+					"$radio_label_text": "permissions.level.operator",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_operator",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "member@settings_common_dx.dropdown_radio_220": {
+					"$toggle_state_binding_name": "#permission_level_radio_member",
+					"$radio_label_text": "permissions.level.visitor",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_visitor",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "operator@settings_common_dx.dropdown_radio_220": {
+					"$toggle_state_binding_name": "#permission_level_radio_operator",
+					"$radio_label_text": "permissions.level.member",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_member",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "xboxlive_option": {
+    "type": "panel",
+    "size": [ 220, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "xblLogin.LoginMessageTitle",
+    "$option_enabled_binding_name": "#xbl_show_broadcast_dropdown",
+    "bindings": [
+      {
+        "binding_name": "#can_be_xbl_enabled",
+        "binding_name_override": "#enabled"
+      }
+    ],
+    "controls": [
+      {
+        "invite_only_toggle@settings_common_dx.dropdown_radio_220": {
+          "$toggle_state_binding_name": "#xbl_broadcast_invite_only",
+          "$radio_label_text": "options.xboxliveBroadcast.friendsOfFriends",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#xbl_broadcast_friends_of_friends",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "friends_only_toggle@settings_common_dx.dropdown_radio_220": {
+          "$toggle_state_binding_name": "#xbl_broadcast_friends_only",
+          "$radio_label_text": "options.xboxliveBroadcast.inviteOnly",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#xbl_broadcast_invite_only",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "friends_of_friends_toggle@settings_common_dx.dropdown_radio_220": {
+          "$toggle_state_binding_name": "#xbl_broadcast_friends_of_friends",
+          "$radio_label_text": "options.xboxliveBroadcast.friendsOnly",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#xbl_broadcast_friends_only",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
   /*//// Stack panels ////*/
   
   "panel_cotent": {
@@ -69,24 +177,9 @@
         "panel_1@start_dx.stacked_row": {
           "controls": [
             {
-              "xbl_settings_dropdown@settings_common_dx.option_dropdown": {
-                "size": [ 220, 20 ],
+              "xboxlive_option@world_advanced_dx.xboxlive_option": {
                 "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "enabled": "not $is_xboxlive_enabled",
-                "$option_label": "xblLogin.LoginMessageTitle",
-                "$dropdown_content": "world_section.xbl_broadcast_dropdown_content",
-                "$dropdown_area": "content_area",
-                "$dropdown_name": "xbl_broadcast_dropdown",
-                "$options_dropdown_toggle_label_binding": "#xbl_broadcast_dropdown_toggle_label",
-                "$option_enabled_binding_name": "#xbl_show_broadcast_dropdown",
-                "$dropdown_scroll_content_size": [ "100%", 60 ],
-                "bindings": [
-                  {
-                    "binding_name": "#can_be_xbl_enabled",
-                    "binding_name_override": "#enabled"
-                  }
-                ]
+                "anchor_to": "top_middle"
               }
             }
           ],
@@ -100,22 +193,12 @@
       },
       {
         "panel_3@start_dx.stacked_row": {
+          "ignored": "$education_edition",
           "controls": [
             {
-              "option_dropdown_permissions@settings_common_dx.option_dropdown": {
-                "size": [ 220, 20 ],
+              "permission_option@world_advanced_dx.permission_option": {
                 "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-                "ignored": "$education_edition",
-                "$option_label": "permissions.title",
-                "$dropdown_content": "permissions.permission_level_dropdown_content",
-                "$dropdown_area": "content_area",
-                "$dropdown_name": "player_permissions_dropdown",
-                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
-                "$options_dropdown_toggle_label_binding": "#player_permissions_dropdown_toggle_label",
-                "$option_enabled_binding_name": "#player_permissions_dropdown_enabled",
-                "$dropdown_scroll_content_size": [ "100%", "385%" ],
-                "$is_world_settings": true
+                "anchor_to": "top_middle"
               }
             }
           ],
@@ -131,7 +214,7 @@
         "panel_4@start_dx.stacked_row": {
           "controls": [
             {
-              "server_sim_distance_slider@settings_common_dx.option_slider": {
+              "server_sim_distance_slider@settings_common_dx.option_slider_220": {
                 "size": [ 220, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -222,14 +305,6 @@
     ]
   },
 
-  /*//// Scrolling Panel ////*/
-  
-  "scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "$scroll_view_port_size": [ 256, "100%" ],
-    "layer": 2,
-    "$scrolling_content": "world_advanced_dx.panel_cotent"
-  },
-
   /*//// Screen ////*/
   
   "world_advanced_label@settings_dx.base_label": {
@@ -238,15 +313,19 @@
   },
 
   "world_advanced_done_button@create_world_dx.more_done_button": {
+    "$unchecked_control": "common_buttons_dx.200_default",
+    "$unchecked_hover_control": "common_buttons_dx.200_hover",
+
     "size": [ 200, 20 ],
     "anchor_from": "bottom_middle",
     "anchor_to": "bottom_middle",
     "offset": [ 0, -7 ]
   },
 
-  "world_advanced_screen_panel@common_menus_dx.java_menu_panel_template": {
+  "world_advanced_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
+    "$scroll_view_port_size": [ 256, "100%" ],
     "$top_content": "world_advanced_dx.world_advanced_label",
-    "$middle_content": "world_advanced_dx.scrolling_panel",
+    "$scrolling_content": "world_advanced_dx.panel_cotent",
     "$bottom_content": "world_advanced_dx.world_advanced_done_button"
   }
 }

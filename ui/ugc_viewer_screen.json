@@ -1,9 +1,9 @@
 {
-  "ugc_viewer_screen": {
-    "$screen_content": "common_dx.null_panel",
-    "$screen_bg_content": "ugc_viewer_dx.screen_content",
-    "$header_safezone_control": "common_dx.null_panel",
-    "$header_bar_control": "common_dx.null_panel",
-    "$is_full_screen_layout": false
-  }
+    "ugc_viewer_screen": {
+        "$screen_content": "common.empty_panel",
+        "$screen_bg_content": "ugc_viewer_dx.screen_content",
+        "$header_safezone_control": "common.empty_panel",
+        "$header_bar_control": "common.empty_panel",
+        "$is_full_screen_layout": false
+    }
 }

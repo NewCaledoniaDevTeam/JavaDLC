@@ -10,6 +10,7 @@
     "controls": [
       {
         "title_panel@anvil.title_label": {
+          "color": "$vdx_container_title_text_color",
           "offset": [ 0, 1 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left"
@@ -44,7 +45,7 @@
           "type": "image",
           "size": [ "100% + 5px", 12 ],
           "offset": [ -0.5, 0 ],
-          "texture": "textures/uidx/white",
+          "texture": "textures/uidx/global/white",
           "layer": -1,
           "color": [ 0, 0, 0 ],
           "alpha": 0.31
@@ -176,7 +177,7 @@
     ]
   },
 
-  "anvil_panel@common.root_panel": {
+  "anvil_panel@common_dx.root_panel": {
     "controls": [
       { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_anvil@anvil_java_dx.dialog_bg_anvil": { "layer": 1 } },
@@ -196,7 +197,7 @@
     "type": "panel",
     "$slot_selected_texture": "",
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
-    "$item_lock_cell_texture": "textures/uidx/cell_image_lock",
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
       { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
@@ -209,7 +210,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { } },
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
   },

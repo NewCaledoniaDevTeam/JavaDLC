@@ -1,7 +1,7 @@
 {
   "namespace": "horse_java_dx",
 
-  "horse_base@java_gui_common.crisxolt_image_panel": {
+  "horse_base@java_gui_common._image_panel": {
     "$texture": "assets/minecraft/textures/gui/container/horse"
   },
 

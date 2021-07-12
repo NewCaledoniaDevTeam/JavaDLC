@@ -10,10 +10,7 @@
         "$recipe_book_content": "blast_furnace_recipe_book_dx.recipe_book_panel",
         "$screen_content": "furnace_dx.center_screen",
         "$screen_bg_content": "furnace_dx.full_screen",
-        "$gamepad_cursor": true,
-        "$use_loading_bars": false,
-        "$screen_animations": [ ],
-        "$background_animations": [ ]
+        "$gamepad_cursor": true
       },
       {
         "requires": "$pocket_screen",

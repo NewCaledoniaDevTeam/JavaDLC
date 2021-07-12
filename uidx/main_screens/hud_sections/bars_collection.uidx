@@ -1,5 +1,44 @@
 {
-  "namespace": "CrisXolt_bars_dx",
+  "namespace": "_bars_dx",
+
+  /*//// Boss Health Panel ////*/
+  
+  "boss_health_main_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "boss_hud_padding": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "visible": "#boss_hud_padding", //Make this visible to move the boss hud panel down
+          "bindings": [
+            {
+              "binding_name": "#boss_hud_padding",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "boss_hud_panel": {
+          "type": "panel",
+          "controls": [
+            {
+              "boss_health_grid@hud.boss_health_grid": {
+                "size": [ 182, "100%" ],
+                "grid_item_template": "_bars_dx.bar_panel",
+                "offset": [ 0, 0 ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Boss Collection ////*/
 
   "bar_name": {
     "type": "label",
@@ -25,59 +64,59 @@
     "$main_bar_control": "main",
     "$collection_name": "boss_bars",
     "$progress_bar_collection": "boss_bars",
-    "$raid_bar_panel_control": "CrisXolt_bars_dx.raid_bar_panel",
-    "$default_bar_panel_control": "CrisXolt_bars_dx.default_bar_panel",
+    "$raid_bar_panel_control": "_bars_dx.raid_bar_panel",
+    "$default_bar_panel_control": "_bars_dx.default_bar_panel",
     "controls": [
-      { "$bar_name_control@CrisXolt_bars_dx.bar_name": { "size": [ 0, 0 ] } },
+      { "$bar_name_control@_bars_dx.bar_name": { "size": [ 0, 0 ] } },
       {
-        "ender_dragon_bar@CrisXolt_bars_bindings_dx.ender_dragon_dindings": {
+        "ender_dragon_bar@_bars_bindings_dx.ender_dragon_dindings": {
           "controls": [
-            { "bar_name@CrisXolt_bars_dx.bar_name": { } },
-            { "ender_dragon_bar_panel@CrisXolt_bars_dx.ender_dragon_bar_panel": { } }
+            { "bar_name@_bars_dx.bar_name": { } },
+            { "ender_dragon_bar_panel@_bars_dx.ender_dragon_bar_panel": { } }
           ]
         }
       },
       {
-        "wither_bar@CrisXolt_bars_bindings_dx.wither_bindings": {
+        "wither_bar@_bars_bindings_dx.wither_bindings": {
           "controls": [
-            { "bar_name@CrisXolt_bars_dx.bar_name": { } },
-            { "wither_bar_panel@CrisXolt_bars_dx.wither_bar_panel": { } }
+            { "bar_name@_bars_dx.bar_name": { } },
+            { "wither_bar_panel@_bars_dx.wither_bar_panel": { } }
           ]
         }
       },
       { 
-        "raid_bar@CrisXolt_bars_bindings_dx.raid_bindings": {
+        "raid_bar@_bars_bindings_dx.raid_bindings": {
           "controls": [
-            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.name" } },
+            { "bar_name@_bars_dx.bar_name": { "text": "bar.event.raid.name" } },
             { "raid_panel@$raid_bar_panel_control": { } }
           ]
         }
       },
       { 
-        "raid_remaining_2_bar@CrisXolt_bars_bindings_dx.raid_remaining_2_bindings": {
+        "raid_remaining_2_bar@_bars_bindings_dx.raid_remaining_2_bindings": {
           "controls": [
-            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.remaining.2" } },
+            { "bar_name@_bars_dx.bar_name": { "text": "bar.event.raid.remaining.2" } },
             { "raid_panel@$raid_bar_panel_control": { } }
           ]
         }
       },
       { 
-        "raid_remaining_1_bar@CrisXolt_bars_bindings_dx.raid_remaining_1_bindings": {
+        "raid_remaining_1_bar@_bars_bindings_dx.raid_remaining_1_bindings": {
           "controls": [
-            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.remaining.1" } },
+            { "bar_name@_bars_dx.bar_name": { "text": "bar.event.raid.remaining.1" } },
             { "raid_panel@$raid_bar_panel_control": { } }
           ]
         }
       },
       { 
-        "raid_remaining_0_bar@CrisXolt_bars_bindings_dx.raid_remaining_0_bindings": {
+        "raid_remaining_0_bar@_bars_bindings_dx.raid_remaining_0_bindings": {
           "controls": [
-            { "bar_name@CrisXolt_bars_dx.bar_name": { "text": "bar.event.raid.remaining.0" } },
+            { "bar_name@_bars_dx.bar_name": { "text": "bar.event.raid.remaining.0" } },
             { "raid_panel@$raid_bar_panel_control": { } }
           ]
         }
       },
-      { "default_bar_control@CrisXolt_default_bar_dx.001": { } }
+      { "default_bar_control@_default_bar_dx.001": { } }
     ],
     "bindings": [
       {

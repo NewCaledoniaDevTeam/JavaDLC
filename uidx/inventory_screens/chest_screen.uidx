@@ -7,6 +7,7 @@
     "controls": [
       {
         "chest_label@chest.chest_label": {
+          "color": "$vdx_container_title_text_color",
           "offset": [ 8, 5 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left"
@@ -26,6 +27,7 @@
     "controls": [
       {
         "chest_label@chest.chest_label": {
+          "color": "$vdx_container_title_text_color",
           "offset": [ 8, 5 ],
           "anchor_from": "top_left",
           "anchor_to": "top_left"
@@ -39,7 +41,7 @@
     ]
   },
 
-  "chest_panel@common.root_panel": {
+  "chest_panel@common_dx.root_panel": {
     "size": "$chest_panel_size",
     "$background_images": "java_gui_common.cell_image",
     "$highlight_control": "common_dx.highlight_slot_panel",
@@ -63,7 +65,7 @@
     "type": "panel",
     "$slot_selected_texture": "",
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
-    "$item_lock_cell_texture": "textures/uidx/cell_image_lock",
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
       { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
@@ -76,7 +78,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { } },
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
   },

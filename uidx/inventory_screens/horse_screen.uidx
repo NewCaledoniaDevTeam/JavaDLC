@@ -21,6 +21,13 @@
                 "layer": 10,
                 "anchor_from": "center",
                 "anchor_to": "center",
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ],
                 "bindings": [
                   {
                     "binding_name": "#entity_id"
@@ -127,14 +134,14 @@
     "$background_images": "java_gui_common.cell_image",
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
-      { "horse_label@horse.horse_label": { "offset": [ 8, 5 ], "layer": 5 } },
+      { "horse_label@horse.horse_label": { "offset": [ 8, 5 ], "layer": 5, "color": "$vdx_container_title_text_color" } },
       { "inv_panel@horse_dx.inv_panel": { } },
       { "equipment@horse_dx.equip_panel": { "layer": 5 } },
       { "renderer@horse_dx.horse_renderer": { "layer": 5 } }
     ]
   },
   
-  "horse_panel@common.root_panel": {
+  "horse_panel@common_dx.root_panel": {
     "controls": [
       { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_horse@horse_java_dx.dialog_bg_horse": { "layer": 1 } },
@@ -154,7 +161,7 @@
     "type": "panel",
     "$slot_selected_texture": "",
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
-    "$item_lock_cell_texture": "textures/uidx/cell_image_lock",
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
       { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
@@ -167,7 +174,6 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
   },

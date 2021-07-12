@@ -4,27 +4,26 @@
         "description": "Minecraft Bedrock Texture DLC Design to look like Minecraft Java. New Caledonia Shader Pack Required.",
         "name": "Java DLC",
         "uuid": "7647d467-3169-45a5-a6e3-8e4212eb6297",
-        "version": [0, 0, 4],
-        "min_engine_version": [ 1, 14, 0 ]
+        "version": [0, 0, 5],
+        "min_engine_version": [1, 14, 0]
     },
-    "modules": [
-        {
-            "description": "Minecraft Bedrock Texture DLC Design to look like Minecraft Java. New Caledonia Shader Pack Required.",
-            "type": "resources",
-            "uuid": "ed18b8da-8b71-4257-902b-fc0912c6db01",
-            "version": [0, 0, 1]
-        }
-    ],
-    "subpacks": [
-        {
-            "folder_name": "dark",
-            "name": "Dark Java UI",
-            "memory_tier": 1
-        },
-        {
-            "folder_name": "normal",
-            "name": "Normal Java UI",
-            "memory_tier": 2
-        } 
-    ]
+    "modules": [{
+        "description": "Minecraft Bedrock Texture DLC Design to look like Minecraft Java. New Caledonia Shader Pack Required.",
+        "type": "resources",
+        "uuid": "ed18b8da-8b71-4257-902b-fc0912c6db01",
+        "version": [0, 0, 1]
+    }],
+    "subpacks": [{
+        "folder_name": "starwars",
+        "name": "Star Wars Java UI",
+        "memory_tier": 1
+    }, {
+        "folder_name": "dark",
+        "name": "Dark Java UI",
+        "memory_tier": 1
+    }, {
+        "folder_name": "normal",
+        "name": "Normal Java UI",
+        "memory_tier": 2
+    }]
 }

@@ -1,6 +1,6 @@
 {
-  "mob_effect_screen": {
-    "$screen_content": "common_dx.null_panel",
-    "$screen_bg_content": "mob_effect_dx.main_screen"
-  }
+    "mob_effect_screen": {
+        "$screen_content": "common.empty_panel",
+        "$screen_bg_content": "mob_effect_dx.main_screen"
+    }
 }

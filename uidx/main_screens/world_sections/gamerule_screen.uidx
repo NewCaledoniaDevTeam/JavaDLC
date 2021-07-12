@@ -104,7 +104,7 @@
     "type": "stack_panel",
     "size": [ 220, "100%c" ],
     "$categorie_shadow": true,
-    "$ignore_hover_text": false,
+    "$hover_content": "common_dx.hover_text_panel",
     "$hover_text_label_control": "gamerule_dx.gamerule_hover_text",
     "controls": [
       { 
@@ -139,20 +139,6 @@
         "panel_1@start_dx.stacked_row": {
           "ignored": "$education_edition",
           "controls": [
-            {
-              "keep_inventory_toggle_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 44, 20 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$gamerule_command_text": "keepInventory",
-                "bindings": [
-                  {
-                    "binding_name": "(not #keep_inventory_enabled)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
             {
               "keep_inventory_toggle@settings_common_dx.option_toggle_alt": {
                 "$gamerule_command_text": "keepInventory",
@@ -248,21 +234,6 @@
           "ignored": "$education_edition",
           "controls": [
             {
-              "mob_griefing_toggle_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 44, 20 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$default_value_text": "true",
-                "$gamerule_command_text": "mobGriefing",
-                "bindings": [
-                  {
-                    "binding_name": "(not #mob_griefing_enabled)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
               "mob_griefing_toggle@settings_common_dx.option_toggle_alt": {
                 "$default_value_text": "true",
                 "$gamerule_command_text": "mobGriefing",
@@ -293,24 +264,6 @@
         "panel_5@start_dx.stacked_row": {
           "ignored": "$education_edition",
           "controls": [
-            {
-              "mob_spawn_toggle_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 44, 20 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$default_value_text": "true",
-                "$gamerule_command_text": "doMobSpawning",
-                "$gamerule_description_text": "gamerule.doMobSpawning.description",
-                "$ignore_gamerule_description": false,
-                "$description_text_size": [ 122, "default" ],
-                "bindings": [
-                  {
-                    "binding_name": "(not #mob_spawn_enabled)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
             {
               "mob_spawn_toggle@settings_common_dx.option_toggle_alt": {
                 "$default_value_text": "true",
@@ -346,24 +299,6 @@
         "panel_6@start_dx.stacked_row": {
           "ignored": "$education_edition",
           "controls": [
-            {
-              "entities_drop_loot_toggle_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 44, 20 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$default_value_text": "true",
-                "$gamerule_description_text": "gamerule.doEntityDrops.description",
-                "$ignore_gamerule_description": false,
-                "$description_text_size": [ 130, "default" ],
-                "$gamerule_command_text": "doEntityDrops",
-                "bindings": [
-                  {
-                    "binding_name": "(not #entities_drop_loot_enabled)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
             {
               "entities_drop_loot_toggle@settings_common_dx.option_toggle_alt": {
                 "$default_value_text": "true",
@@ -453,20 +388,6 @@
           "ignored": "$education_edition",
           "controls": [
             {
-              "always_day_toggle_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 44, 20 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$gamerule_command_text": "alwaysDay",
-                "bindings": [
-                  {
-                    "binding_name": "(not #always_day_enabled)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
               "always_day_toggle@settings_common_dx.option_toggle_alt": {
                 "$gamerule_command_text": "alwaysDay",
                 "size": [ 220, 20 ],
@@ -488,21 +409,6 @@
         "panel_8@start_dx.stacked_row": {
           "ignored": "$education_edition",
           "controls": [
-            {
-              "daylight_cycle_toggle_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 44, 20 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$gamerule_command_text": "doDaylightCycle",
-                "$default_value_text": "true",
-                "bindings": [
-                  {
-                    "binding_name": "(not #daylight_cycle_enabled)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
             {
               "daylight_cycle_toggle@settings_common_dx.option_toggle_alt": {
                 "$gamerule_command_text": "doDaylightCycle",
@@ -575,21 +481,6 @@
           "ignored": "$education_edition",
           "controls": [
             {
-              "weather_cycle_toggle_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 44, 20 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$gamerule_command_text": "doWeatherCycle",
-                "$default_value_text": "true",
-                "bindings": [
-                  {
-                    "binding_name": "(not #always_day_enabled)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
               "weather_cycle_toggle@settings_common_dx.option_toggle_alt": {
                 "$gamerule_command_text": "doWeatherCycle",
                 "$default_value_text": "true",
@@ -613,21 +504,6 @@
           "ignored": "$education_edition",
           "controls": [
             {
-              "random_tick_speed_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 66, "100%" ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$gamerule_command_text": "randomTickSpeed",
-                "$default_value_text": "1",
-                "bindings": [
-                  {
-                    "binding_name": "(not #random_tick_speed_enabled)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
               "random_tick_speed@settings_common_dx.option_text_edit_alt": {
                 "$gamerule_command_text": "randomTickSpeed",
                 "$default_value_text": "1",
@@ -640,9 +516,8 @@
                 "$option_enabled_binding_name": "#random_tick_speed_enabled",
                 "$max_text_edit_length": 4,
                 "$text_edit_box_text_type": "NumberChars",
-                "$option_text_edit_control_size": [ "50%", "100%" ],
                 "$text_box_name": "random_tick_speed_text_box",
-                "$button_content": "common_buttons_dx.reset_icon",
+                "$button_content": "java_gui_common.reset_icon",
                 "$button_text": "createWorldScreen.randomtickspeed.reset",
                 "$pressed_button_name": "reset_random_tick_speed"
               }
@@ -684,21 +559,6 @@
           "ignored": "$education_edition",
           "controls": [
             {
-              "command_blocks_enabled_toggle_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 44, 20 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$gamerule_command_text": "commandblocksenabled",
-                "$default_value_text": "true",
-                "bindings": [
-                  {
-                    "binding_name": "(not #command_blocks_enabled_on)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
               "command_blocks_enabled_toggle@settings_common_dx.option_toggle_alt": {
                 "$gamerule_command_text": "commandblocksenabled",
                 "$default_value_text": "true",
@@ -724,20 +584,6 @@
           "$is_last_button": true,
           "controls": [
             {
-              "education_toggle_disabled@video_dx.hover_text_button_panel": {
-                "size": [ 44, 20 ],
-                "anchor_from": "top_right",
-                "anchor_to": "top_right",
-                "$gamerule_command_text": "Education",
-                "bindings": [
-                  {
-                    "binding_name": "(not #education_toggle_enabled)",
-                    "binding_name_override": "#visible"
-                  }
-                ]
-              }
-            },
-            {
               "education_toggle@settings_common_dx.option_toggle_alt": {
                 "$gamerule_command_text": "Education",
                 "size": [ 220, 20 ],
@@ -757,14 +603,6 @@
     ]
   },
 
-  /*//// Scrolling Panel ////*/
-  
-  "scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "$scroll_view_port_size": [ 256, "100%" ],
-    "layer": 2,
-    "$scrolling_content": "gamerule_dx.panel_cotent"
-  },
-
   /*//// Screen ////*/
   
   "gamerule_label@settings_dx.base_label": {
@@ -772,17 +610,24 @@
     "offset": [ 0, 19 ]
   },
 
-  "gamerule_screen_panel@common_menus_dx.java_menu_panel_template": {
+  "gamerule_screen_panel@common_menus_dx.java_edition_menu_panel_template": {
+    "$scroll_view_port_size": [ 256, "100%" ],
     "$top_content_size": [ "100%", 43 ],
     "$top_content": "gamerule_dx.gamerule_label",
-    "$middle_content": "gamerule_dx.scrolling_panel",
+    "$scrolling_content": "gamerule_dx.panel_cotent",
     "$bottom_content": "gamerule_dx.done_panel"
   },
 
   "done_panel": {
     "type": "panel",
     "controls": [
-      { "more_world_options_done_button@create_world_dx.more_world_options_done_button": { "size": [ 200, 20 ] } }
+      { 
+        "more_world_options_done_button@create_world_dx.more_world_options_done_button": {
+          "$unchecked_control": "common_buttons_dx.200_default",
+          "$unchecked_hover_control": "common_buttons_dx.200_hover",
+          "size": [ 200, 20 ]
+        }
+      }
     ]
   }
 }

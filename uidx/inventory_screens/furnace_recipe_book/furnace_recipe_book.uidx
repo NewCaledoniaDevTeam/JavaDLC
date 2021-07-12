@@ -283,7 +283,7 @@
         }
       },
       {
-        "all_tab_pages@crisxolt_pages_furnace.furnace_recipe_book_tab_pages": {
+        "all_tab_pages@_pages_furnace.furnace_recipe_book_tab_pages": {
           "$tab_page": "all",
           "$number_right": "3",
           "$panel_content": "furnace_pages_dx.all_page_1",
@@ -302,7 +302,7 @@
         }
       },
       {
-        "food_tab_pages@crisxolt_pages_furnace.furnace_recipe_book_tab_pages": {
+        "food_tab_pages@_pages_furnace.furnace_recipe_book_tab_pages": {
           "$tab_page": "food",
           "$number_right": "1",
           "$panel_content": "furnace_pages_dx.food_page_1",
@@ -320,7 +320,7 @@
         }
       },
       {
-        "stone_tab_pages@crisxolt_pages_furnace.furnace_recipe_book_tab_pages": {
+        "stone_tab_pages@_pages_furnace.furnace_recipe_book_tab_pages": {
           "$tab_page": "stone",
           "$number_right": "2",
           "$panel_content": "furnace_pages_dx.stone_page_1",
@@ -338,7 +338,7 @@
         }
       },
       {
-        "materials_tab_pages@crisxolt_pages_furnace.furnace_recipe_book_tab_pages": {
+        "materials_tab_pages@_pages_furnace.furnace_recipe_book_tab_pages": {
           "$tab_page": "materials",
           "$number_right": "1",
           "$panel_content": "furnace_pages_dx.materials_page_1",

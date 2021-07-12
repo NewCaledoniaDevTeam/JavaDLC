@@ -1,0 +1,18 @@
+{
+  "safe_zone_screen": {
+    "controls": [
+      {
+        "safe_zone_bounds_markers": {
+          "type": "panel",
+          "controls": [
+            { "top_left_marker@safe_zone.corner_tl": {} },
+            { "top_right_marker@safe_zone.corner_tr": {} },
+            { "bottom_left_marker@safe_zone.corner_bl": {} },
+            { "bottom_right_marker@safe_zone.corner_br": {} }
+          ]
+        }
+      },
+      { "main_content_panel@safe_zone_dx.main_content_panel": { } }
+    ]
+  }
+}

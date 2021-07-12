@@ -1,5 +1,5 @@
 {
-  "namespace": "CrisXolt_bars_bindings_dx",
+  "namespace": "_bars_bindings_dx",
 
   "ender_dragon_dindings": {
     "type": "panel",

@@ -1,0 +1,48 @@
+{
+  "namespace": "manifest_validation_dx",
+
+  "pack_info_stack_panel": {
+    "type": "stack_panel",
+    "orientation": "vertical",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 310, "100%c" ],
+    "controls": [
+      {
+        "top_panel": {
+          "type": "panel",
+          "size": [ 1, 4 ]
+        }
+      },
+      {
+        "errors@manifest_validation.pack_error_item": { }
+      },
+      {
+        "end_panel": {
+          "type": "panel",
+          "size": [ 1, 4 ]
+        }
+      }
+    ]
+  },
+  
+  "pack_info_label@settings_dx.base_label": {
+    "text": "manifestvalidation.title",
+    "offset": [ 0, 4 ]
+  },
+
+  "confirm_button@common_buttons_dx.main_button_200": {
+    "$pressed_button_name": "button.menu_exit",
+    "$button_text": "gui.confirm",
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "offset": [ 0, -9 ]
+  },
+
+  "manifest_validation_screen_content@common_menus_dx.java_edition_menu_panel_template": {
+    "$scroll_view_port_size": [ 324, "100%" ],
+    "$top_content": "manifest_validation_dx.pack_info_label",
+    "$bottom_content": "manifest_validation_dx.confirm_button",
+    "$scrolling_content": "manifest_validation_dx.pack_info_stack_panel"
+  }
+}

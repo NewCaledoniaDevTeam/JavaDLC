@@ -203,11 +203,11 @@
     "layer": 2,
     "controls": [
       {
-        "skip_button@common_buttons_dx.main_button": {
+        "skip_button@common_buttons_dx.main_button_74": {
           "$pressed_button_name": "button.menu_exit",
           "anchor_from": "bottom_right",
           "anchor_to": "bottom_right",
-          "size": [ 75, 20 ],
+          "size": [ 74, 20 ],
           "$button_text": "credits.skip",
           "offset": [ -8, -8 ],
           "bindings": [

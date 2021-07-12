@@ -85,31 +85,39 @@
         }
       },
       {
-        "custom_hover_text@common_dx.hover_text_panel": {
-          "$hover_text_label_control": "enchanting_dx.enchant_hover_text_label",
+        "hover_text_panels": {
+          "type": "panel",
           "ignored": "(not $is_hover)",
-          "bindings": [
+          "controls": [
             {
-              "binding_name": "(not (#hover_text = ''))",
-              "binding_name_override": "#visible",
-              "binding_type": "collection",
-              "binding_collection_name": "#enchant_buttons"
+              "custom_hover_text@common_dx.hover_text_panel": {
+                "ignored": "(not $hover_text_shadow)",
+                "$hover_text_label_control": "enchanting_dx.enchant_hover_text_label",
+                "bindings": [
+                  {
+                    "binding_name": "(not (#hover_text = ''))",
+                    "binding_name_override": "#visible",
+                    "binding_type": "collection",
+                    "binding_collection_name": "#enchant_buttons"
+                  }
+                ]
+              }
+            },
+            {
+              "hover_text@common.hover_text": {
+                "ignored": "$hover_text_shadow",
+                "bindings": [
+                  {
+                    "binding_name": "#hover_text",
+                    "binding_collection_name": "#enchant_buttons",
+                    "binding_type": "collection"
+                  }
+                ]
+              }
             }
           ]
         }
-      },/* 
-      {
-        "hover_text@common.hover_text": {
-          "ignored": "(not $is_hover)",
-          "bindings": [
-            {
-              "binding_name": "#hover_text",
-              "binding_collection_name": "#enchant_buttons",
-              "binding_type": "collection"
-            }
-          ]
-        }
-      }, */
+      },
       { "rune_text@$rune_text": { "layer": 2 } },
       { "enchant_cost@$enchant_cost": { "layer": 2 } }
     ]
@@ -301,6 +309,7 @@
     "controls": [
       {
         "enchanting_label@enchanting.enchanting_label": {
+          "color": "$vdx_container_title_text_color",
           "offset": [ 12, 4 ],
           "text": "container.enchant"
         }
@@ -320,6 +329,13 @@
                 "renderer": "enchanting_book_renderer",
                 "offset": [ 0, 0 ],
                 "layer": 13,
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ],
                 "bindings": [
                   {
                     "binding_name": "#open",
@@ -338,7 +354,7 @@
     ]
   },
 
-  "enchanting_panel@common.root_panel": {
+  "enchanting_panel@common_dx.root_panel": {
     "controls": [
       { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_enchanting@enchanting_table_java_dx.dialog_bg_enchanting": { "layer": 1 } },
@@ -358,7 +374,7 @@
     "type": "panel",
     "$slot_selected_texture": "",
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
-    "$item_lock_cell_texture": "textures/uidx/cell_image_lock",
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
       { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
@@ -371,7 +387,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { } },
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
   },

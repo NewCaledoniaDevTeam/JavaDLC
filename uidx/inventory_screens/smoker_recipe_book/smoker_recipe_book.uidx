@@ -131,7 +131,7 @@
         }
       },
       {
-        "food_tab_pages@crisxolt_pages_furnace.furnace_recipe_book_tab_pages": {
+        "food_tab_pages@_pages_furnace.furnace_recipe_book_tab_pages": {
           "$tab_page": "food",
           "$number_right": "1",
           "$panel_content": "furnace_pages_dx.food_page_1",

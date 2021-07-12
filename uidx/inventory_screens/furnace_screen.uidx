@@ -1,58 +1,7 @@
 {
   "namespace": "furnace_dx",
 
-  /*//// ////*/
-
-  /*//// Button ////*/
-  
-  "item_renderer": {
-    "type": "custom",
-    "renderer": "inventory_item_renderer",
-    "size": [ 16, 16 ],
-    "offset": [ 4, 4 ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "layer": 10,
-    "$item_value|default": "",
-    "property_bag": {
-      "#item_id_aux": "$item_value"
-    }
-  },
-
-  "item_renderer_overlay@furnace_dx.item_renderer": {
-    "offset": [ 0, 0 ]
-  },
-
-  "cell_image_recipe@recipe_book_java_dx.cell_image_recipe": {
-    "size": [ 25, 25 ],
-    "controls": [
-      { "item_renderer@furnace_dx.item_renderer": { } }
-    ]
-  },
-
-  "cell_image_recipe_hover@recipe_book_java_dx.cell_image_recipe": {
-    "size": [ 25, 25 ],
-    "controls": [
-      { "item_renderer@furnace_dx.item_renderer": { } },
-      { "hover_text_panel@common_dx.hover_text_panel": { } }
-    ]
-  },
-
-  "items_tab@common_toggles_dx.toggle_panel": {
-    "size": [ 25, 25 ],
-    "$tab_content_size": [ 25, 25 ],
-    "$unchecked_control": "furnace_dx.cell_image_recipe",
-    "$unchecked_hover_control": "furnace_dx.cell_image_recipe_hover",
-    "$checked_control": "furnace_dx.cell_image_recipe",
-    "$checked_hover_control": "furnace_dx.cell_image_recipe_hover",
-    "$toggle_focus_enabled": false,
-    "$radio_toggle_group": true,
-    "$toggle_name": "items_toggle",
-    "$tab_view_binding_name": "$item_view",
-    "$toggle_binding_type": "global"
-  },
-
-  /*//// ////*/
+  /*//// Grid ////*/
   
   "furnace_ingredient_item@common.container_item": {
     "$background_images": "java_gui_common.cell_image",
@@ -65,9 +14,7 @@
     "$focus_override_left": "FOCUS_OVERRIDE_STOP",
     "$focus_override_left_binding_type": "none",
     "$focus_override_up": "FOCUS_OVERRIDE_STOP",
-    "$focus_override_up_binding_type": "none"//,
-
-    //"$cell_overlay_ref": "furnace_input_dx.input_overlay_panel"
+    "$focus_override_up_binding_type": "none"
   },
 
   "furnace_fuel_item@common.container_item": {
@@ -81,9 +28,7 @@
     "$focus_override_right": "furnace_output_item",
     "$focus_override_right_binding_type": "none",
     "$focus_override_left": "FOCUS_OVERRIDE_STOP",
-    "$focus_override_left_binding_type": "none"//,
-
-    //"$cell_overlay_ref": "furnace_fuel_dx.fuel_overlay_panel"
+    "$focus_override_left_binding_type": "none"
   },
   
   "furnace_output_item@common.container_item": {
@@ -98,9 +43,7 @@
     "$focus_override_right_binding_type": "none",
     "$focus_override_right": "FOCUS_OVERRIDE_STOP",
     "$focus_override_left_binding_type": "none",
-    "$focus_override_left": "furnace_fuel_item"//,
-
-    //"$cell_overlay_ref": "furnace_output_dx.output_overlay_panel"
+    "$focus_override_left": "furnace_fuel_item"
   },
 
   "furnace_panel_top_half": {
@@ -108,7 +51,7 @@
     "layer": 8,
     "$highlight_control": "common_dx.highlight_slot_panel",
     "controls": [
-      { "furnace_label@furnace.furnace_label": { "offset": [ 0, 5 ] } },
+      { "furnace_label@furnace.furnace_label": { "offset": [ 0, 5 ], "color": "$vdx_container_title_text_color" } },
       { 
         "arrow@$arrow_texture": {
           "size": [ 24, 17 ],
@@ -143,21 +86,11 @@
       },
       { "ingredient@furnace_dx.furnace_ingredient_item": {} },
       { "fuel@furnace_dx.furnace_fuel_item": {} },
-      { "output@furnace_dx.furnace_output_item": {} },
-      { 
-        "gamepad_helper_select@common_dx.gamepad_helper_select": {
-          "offset": [ 17, 8 ],
-          "anchor_from": "top_left",
-          "anchor_to": "top_left",
-          "$hide_description": true
-        }
-      }/*,
-      { "show_recipe_book_toggle@furnace_recipe_book_dx.show_recipe_book_toggle": { } },
-      { "hide_recipe_book_toggle@furnace_recipe_book_dx.hide_recipe_book_toggle": { } } */
+      { "output@furnace_dx.furnace_output_item": {} }
     ]
   },
 
-  "furnace_panel@common.root_panel": {
+  "furnace_panel@common_dx.root_panel": {
     "controls": [
       { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_furnace@$furnace_dialog_bg": { "layer": 1 } },
@@ -171,59 +104,16 @@
     ]
   },
 
-  "furnace_and_recipe_book_panel": {
-    "type": "stack_panel",
-    "size": [ "100%c", 166 ],
-    "orientation": "horizontal",
-    "controls": [
-      { 
-        "recipe_book@$recipe_book_content": {
-          "bindings": [
-            { 
-              "binding_type": "view",
-              "source_control_name": "show_tab_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-            }
-          ]
-        }
-      },
-      {
-        "center_fold": {
-          "type": "panel",
-          "size": [ 1, "100%" ],
-          "bindings": [
-            { 
-              "binding_type": "view",
-              "source_control_name": "show_tab_toggle",
-              "source_property_name": "#toggle_state",
-              "target_property_name": "#visible"
-           }
-          ]
-        }
-      },
-      { "furnace_panel@furnace_dx.furnace_panel": { } }
-    ],
-    "bindings": [
-      {
-        "binding_type": "global",
-        "binding_name": "(not #is_creative_mode)",
-        "binding_name_override": "#visible"
-      }
-    ]
-  },
-
   /*//// Main ////*/
 
   "main_screen_content": {
     "type": "panel",
     "$slot_selected_texture": "",
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
-    "$item_lock_cell_texture": "textures/uidx/cell_image_lock",
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
       { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
-      //{ "furnace_and_recipe_book_panel@furnace_dx.furnace_and_recipe_book_panel": { } }
       { "furnace_panel@furnace_dx.furnace_panel": { } }
     ]
   },
@@ -233,7 +123,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { } },
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
   },

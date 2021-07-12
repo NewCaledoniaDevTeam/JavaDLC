@@ -1,7 +1,7 @@
 {
   "namespace": "smithing_java_dx",
 
-  "smithing_base@java_gui_common.crisxolt_image_panel": {
+  "smithing_base@java_gui_common._image_panel": {
     "$texture": "assets/minecraft/textures/gui/container/smithing"
   },
   

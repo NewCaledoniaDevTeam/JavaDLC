@@ -63,15 +63,14 @@
     "size": [ 16, 18 ],
     "$button_ref": "stonecutter_dx.stone_slot_button",
     "$banner_stone_ref": "stonecutter_dx.item_panel",
-    "$background_images": ""
+    "$background_images": "common.empty_panel"
   },
 
   "scroll_grid_panel": {
     "type": "panel",
     "size": [ "100%", "100%c" ],
-    "$grid_item_template": "stonecutter_dx.stone_button",
     "controls": [
-      { "grid@stonecutter.scroll_grid": {} }
+      { "grid@stonecutter.scroll_grid": { "$grid_item_template": "stonecutter_dx.stone_button" } }
     ]
   },
 
@@ -100,8 +99,10 @@
     "offset": [ 119, 15 ],
     "bindings": [
       {
-        "binding_name": "(not #has_input_item)",
-        "binding_name_override": "#visible"
+        "binding_name": "(#stone_selector_total_items < 13)",
+        "binding_name_override": "#visible",
+        "binding_type": "collection",
+        "binding_collection_name": "stones"
       }
     ]
   },
@@ -113,6 +114,7 @@
     "controls": [
       {
         "stonecutter_label@stonecutter.stonecutter_label": {
+          "color": "$vdx_container_title_text_color",
           "anchor_to": "top_left",
           "anchor_from": "top_left",
           "offset": [ 8, 3 ]
@@ -136,20 +138,12 @@
           "size": [ 26, 26 ]
         }
       },
-      {
-        "result_banner_renderer@stonecutter.result_banner_renderer": {
-          "anchor_to": "top_right",
-          "anchor_from": "top_right",
-          "size": [ 20, 40 ],
-          "offset": [ -15, 8 ]
-        }
-      },
       { "scrolling_panel@stonecutter_dx.scrolling_panel": { } },
       { "locked_scroll_box@stonecutter_dx.locked_scroll_box": { } }
     ]
   },
   
-  "stonecutter_panel@common.root_panel": {
+  "stonecutter_panel@common_dx.root_panel": {
     "controls": [
       { "close_button_panel@inventory_dx.close_button_panel": { } },
       { "dialog_bg_stonecutter@stonecutter_java_dx.dialog_bg_stonecutter": { "layer": 1 } },
@@ -169,7 +163,7 @@
     "type": "panel",
     "$slot_selected_texture": "",
     "$item_lock_cell_size": [ "100%-2px", "100%-2px" ],
-    "$item_lock_cell_texture": "textures/uidx/cell_image_lock",
+    "$item_lock_cell_texture": "textures/uidx/highlight/cell_image_lock",
     "controls": [
       { "inventory_selected_icon_button@common_dx.inventory_selected_icon_button": {} },
       { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": {} },
@@ -182,7 +176,7 @@
   "center_screen": {
     "type": "panel",
     "controls": [
-      { "container_gamepad_helpers@common.container_gamepad_helpers": { } },
+      { "container_gamepad_helpers@common_tooltip_dx.container_gamepad_helpers": { } },
       { "screen_background@java_gui_common.screen_background": { "layer": -10, "ignored": "(not $is_holographic)" } }
     ]
   },

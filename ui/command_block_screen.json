@@ -1,6 +1,6 @@
 {
-  "command_block_screen": {
-    "$screen_content": "command_block_dx.command_block_screen_content",
-    "$screen_bg_content": "java_gui_common.screen_background"
-  }
+    "command_block_screen": {
+        "$screen_content": "command_block_dx.command_block_screen_content",
+        "$screen_bg_content": "java_gui_common.screen_background"
+    }
 }

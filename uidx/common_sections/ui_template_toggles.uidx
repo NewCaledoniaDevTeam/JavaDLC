@@ -18,6 +18,16 @@
     "$custom_to_button_id|default": "",
     "$custom_mapping_type|default": "global",
     "$custom_scope|default": "",
+
+    "$unchecked_control": "common.empty_panel",
+    "$checked_control": "common.empty_panel",
+    "$unchecked_hover_control": "common.empty_panel",
+    "$checked_hover_control": "common.empty_panel",
+
+    "$unchecked_locked_control": "common.empty_panel",
+    "$unchecked_locked_hover_control": "common.empty_panel",
+    "$checked_locked_control": "common.empty_panel",
+    "$checked_locked_hover_control": "common.empty_panel",
     "controls": [
       {
         "$tab_view_binding_name@common.toggle": {
@@ -55,20 +65,10 @@
 
   /*////// MAIN MENU BUTTON TOGGLE //////*/
 
-  "main_menu_button_toggle@common_toggles_dx.toggle_panel": {
+  "main_button_toggle@common_toggles_dx.toggle_panel": {
     "$toggle_tts_name": "",
     "$toggle_tts_header": "",
     "$toggle_tts_toggle_on_text": "accessibility.button.tts.title",
-    "$toggle_tts_toggle_off_text": "accessibility.button.tts.title",
-
-    "$unchecked_control": "common_buttons_dx.default",
-    "$checked_control": "common_buttons_dx.pressed",
-    "$unchecked_hover_control": "common_buttons_dx.hover",
-    "$checked_hover_control": "common_buttons_dx.hover",
-    
-    "$unchecked_locked_control": "common_buttons_dx.locked",
-    "$checked_locked_control": "common_buttons_dx.locked",
-    "$unchecked_locked_hover_control": "common_buttons_dx.locked",
-    "$checked_locked_hover_control": "common_buttons_dx.locked"
+    "$toggle_tts_toggle_off_text": "accessibility.button.tts.title"
   }
 }

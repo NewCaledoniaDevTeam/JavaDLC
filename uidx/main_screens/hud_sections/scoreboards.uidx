@@ -3,19 +3,12 @@
 
   "scoreboard_sidebar": {
     "type": "image",
-    "texture": "textures/uidx/scoreboard_sidebar",
+    "layer": 100,
+    "texture": "textures/uidx/hud/scoreboard_sidebar",
     "size": [ "100%cm", "100%c" ],
     "offset": [ -1, 0 ],
     "anchor_from": "right_middle",
     "anchor_to": "right_middle",
-    "ignored": "$scoreboards_feature_disabled",
-    "bindings": [
-      {
-        "binding_name": "#scoreboard_sidebar_visible",
-        "binding_type": "global",
-        "binding_name_override": "#visible"
-      }
-    ],
     "controls": [
       {
         "displayed_objective": {

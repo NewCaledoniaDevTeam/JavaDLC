@@ -1,9 +1,6 @@
 {
-  "death_screen": {
-    "$screen_content": "death_dx.center_screen",
-    "$screen_bg_content": "death_dx.full_screen",
-    "$use_loading_bars": false,
-    "$screen_animations": [ ],
-    "$background_animations": [ ]
-  }
+    "death_screen": {
+        "$screen_content": "death_dx.center_screen",
+        "$screen_bg_content": "death_dx.full_screen"
+    }
 }

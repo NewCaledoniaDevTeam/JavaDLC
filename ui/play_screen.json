@@ -1,8 +1,6 @@
 {
-  "play_screen": {
-    "$screen_content": "common_dx.null_panel",
-    "$screen_bg_content": "play_dx.play_screen_content",
-    "$screen_animations": [ ],
-    "$background_animations": [ ]
-  }
+    "play_screen": {
+        "$screen_content": "common.empty_panel",
+        "$screen_bg_content": "play_dx.play_screen_content"
+    }
 }

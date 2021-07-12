@@ -1,0 +1,7 @@
+{
+  "namespace": "ender_chest_java_dx",
+
+  /*////// Base //////*/
+
+  "dialog_bg_ender_chest@generic_54_java_dx.dialog_bg_chest_small": { }
+}

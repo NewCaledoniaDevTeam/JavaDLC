@@ -1,5 +1,5 @@
 {
-  "namespace": "crisxolt_pages_part_7",
+  "namespace": "_pages_part_7",
   
   /*//// Panels base ////*/
   
@@ -14,7 +14,7 @@
       }
     ],
     "controls": [
-      { "page_31@crisxolt_tab_pages.page_31": {} },
+      { "page_31@_tab_pages.page_31": {} },
       {
         "page_32": {
           "type": "panel",
@@ -27,7 +27,7 @@
             }
           ],
           "controls": [
-            { "page_32@crisxolt_tab_pages.page_32": {} },
+            { "page_32@_tab_pages.page_32": {} },
             {
               "page_33": {
                 "type": "panel",
@@ -40,7 +40,7 @@
                   }
                 ],
                 "controls": [
-                  { "page_33@crisxolt_tab_pages.page_33": { "$ignore_next_button": true } },
+                  { "page_33@_tab_pages.page_33": { "$ignore_next_button": true } },
                   {
                     "page_34": {
                       "type": "panel",
@@ -54,7 +54,7 @@
                         }
                       ],
                       "controls": [
-                        { "page_34@crisxolt_tab_pages.page_34": {} },
+                        { "page_34@_tab_pages.page_34": {} },
                         {
                           "page_35": {
                             "type": "panel",
@@ -67,7 +67,7 @@
                               }
                             ],
                             "controls": [
-                              { "page_35@crisxolt_tab_pages.page_35": { "$ignore_next_button": true } }
+                              { "page_35@_tab_pages.page_35": { "$ignore_next_button": true } }
                             ]
                           }
                         }

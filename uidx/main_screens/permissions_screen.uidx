@@ -1,7 +1,96 @@
 {
   "namespace": "permissions_dx",
 
-  /*////// Players List Panel  //////*/
+  /*//// Dropdown Toggles ////*/
+
+  "permission_option": {
+    "type": "panel",
+    "size": [ 220, 20 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$option_label": "permissions.level",
+    "$option_enabled_binding_name": "#can_edit_permissions",
+    "controls": [
+      {
+        "visitor@settings_common_dx.dropdown_radio_220": {
+					"$toggle_state_binding_name": "#permission_level_radio_visitor",
+					"$radio_label_text": "permissions.level.custom",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_custom",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "member@settings_common_dx.dropdown_radio_220": {
+					"$toggle_state_binding_name": "#permission_level_radio_member",
+					"$radio_label_text": "permissions.level.visitor",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_visitor",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "operator@settings_common_dx.dropdown_radio_220": {
+					"$toggle_state_binding_name": "#permission_level_radio_operator",
+					"$radio_label_text": "permissions.level.member",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_member",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "custom@settings_common_dx.dropdown_radio_220": {
+					"$toggle_state_binding_name": "#permission_level_radio_custom",
+					"$radio_label_text": "permissions.level.operator",
+          "$toggle_value_text": "$radio_label_text",
+          "bindings": [
+            {
+              "binding_name": "#permission_level_radio_operator",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  /*//// Player List Stack Panel ////*/
+
+  "player_list_panel": {
+		"type": "stack_panel",
+		"size": [ "100%", "100%c" ],
+		"controls": [
+      {
+        "top_padding": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      },
+			{ 
+        "players_grid@permissions.players_grid": {
+          "grid_item_template": "permissions_dx.player_grid_item"
+        }
+      },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      }
+		]
+  },
 
   "player_grid_item": {
 		"type": "panel",
@@ -94,15 +183,15 @@
           "$toggle_state_binding_name": "#player_toggle_state",
           "$radio_toggle_group": true,
 
-          "$unchecked_control": "common_dx.null_panel",
+          "$unchecked_control": "common.empty_panel",
           "$checked_control": "permissions_dx.hover_toggle_image",
           "$unchecked_hover_control": "permissions_dx.hover_toggle_image",
           "$checked_hover_control": "permissions_dx.hover_toggle_image",
     
-          "$unchecked_locked_control": "common_dx.null_panel",
-          "$checked_locked_control": "common_dx.null_panel",
-          "$unchecked_locked_hover_control": "common_dx.null_panel",
-          "$checked_locked_hover_control": "common_dx.null_panel"
+          "$unchecked_locked_control": "common.empty_panel",
+          "$checked_locked_control": "common.empty_panel",
+          "$unchecked_locked_hover_control": "common.empty_panel",
+          "$checked_locked_hover_control": "common.empty_panel"
         }
       }
 		]
@@ -114,46 +203,10 @@
     "anchor_to": "top_middle",
     "size": [ "100%", "100%" ],
     "alpha": 0.25,
-    "texture": "textures/uidx/white"
+    "texture": "textures/uidx/global/white"
   },
 
-  "player_list_panel": {
-		"type": "stack_panel",
-		"size": [ "100%", "100%c" ],
-		"controls": [
-      {
-        "top_padding": {
-          "type": "panel",
-          "size": [ "100%", 4 ]
-        }
-      },
-			{ 
-        "players_grid@permissions.players_grid": {
-          "grid_item_template": "permissions_dx.player_grid_item"
-        }
-      },
-      {
-        "bottom_padding": {
-          "type": "panel",
-          "size": [ "100%", 4 ]
-        }
-      }
-		]
-  },
-  
-  "left_scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "size": [ "100%", "100%" ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "$scroll_view_port_size": [ "100%", "100%" ],
-    "$scroll_view_port_size_touch": [ "100%", "100%" ],
-    "$full_middle_panel_offset": [ 0, 0 ],
-    "$full_middle_panel_size": [ "100%", "100%" ],
-    "$scroll_bar_contained": false,
-    "$scrolling_content": "permissions_dx.player_list_panel"
-  },
-
-  /*////// Content List Panel  //////*/
+  /*////// Content List Stack Panel  //////*/
 
   "content_panel": {
     "type": "stack_panel",
@@ -162,7 +215,7 @@
       {
         "top_padding": {
           "type": "panel",
-          "size": [ "100%", 4 ]
+          "size": [ "100%", 2 ]
         }
       },
       {
@@ -198,31 +251,25 @@
           "type": "panel",
           "size": [ "100%", 25 ],
           "controls": [
-            { 
-              "permission_level_dropdown@settings_common_dx.option_dropdown": {
-                "size": [ "100%", 20 ],
+            {
+              "permission_option@permissions_dx.permission_option": {
+                "layer": 4,
                 "anchor_from": "top_middle",
-                "anchor_to": "top_middle",
-
-                "$option_dropdown_type": "common.dropdown_no_scrollpanel",
-                "$option_label": "permissions.level",
-                "$dropdown_content": "permissions.permission_level_dropdown_content",
-                "$dropdown_area": "permissions_options_scrolling_panel",
-                "$dropdown_name": "permission_level_dropdown",
-                "$button_type_panel": "permissions.permission_level_dropdown_state_content",
-                "$option_enabled_binding_name": "#can_edit_permissions",
-                "$options_dropdown_toggle_label_binding": "#permission_level_dropdown_label",
-                "$dropdown_scroll_content_size": [ "100%", "245%" ],
-            
-                "$default_focus_precedence": 2,
-                "$focus_override_up": "back_button"
+                "anchor_to": "top_middle"
               }
             }
           ]
         }
       },
+      {
+        "bottom_padding": {
+          "type": "panel",
+          "size": [ "100%", 2 ]
+        }
+      },
 			{ 
         "permissions_options_grid@permissions.permissions_options_grid": {
+          "$option_binding_name": "unset",
           "grid_item_template": "permissions_dx.permissions_options_grid_item"
         }
       },
@@ -239,7 +286,7 @@
           ],
           "controls": [
             {
-              "kick_button@common_buttons_dx.main_button": {
+              "kick_button@common_buttons_dx.main_button_220": {
                 "size": [ 220, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -248,7 +295,7 @@
                 "$button_text": "permissionsScreen.kick",
                 "focus_change_down": "button.ban",
                 "$focus_override_right": "FOCUS_OVERRIDE_STOP",
-                "layer": 2,
+                "layer": 4,
                 "bindings": [
                   {
                     "binding_name": "#kick_button_enabled",
@@ -273,7 +320,7 @@
           ],
           "controls": [
             {
-              "ban_button@common_buttons_dx.main_button": {
+              "ban_button@common_buttons_dx.main_button_220": {
                 "size": [ 220, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -282,7 +329,7 @@
                 "$button_text": "permissionsScreen.ban",
                 "focus_change_down": "FOCUS_OVERRIDE_STOP",
                 "$focus_override_right": "FOCUS_OVERRIDE_STOP",
-                "layer": 2,
+                "layer": 4,
                 "bindings": [
                   {
                     "binding_name": "#ban_button_enabled",
@@ -299,9 +346,63 @@
 
   "permissions_options_grid_item": {
 		"type": "panel",
-		"orientation": "horizontal",
 		"size": [ "100%", 25 ],
 		"controls": [
+      {
+        "grid_hold": {
+          "type": "panel",
+          "size": [ "100%", 20 ],
+          "anchor_from": "top_middle",
+          "anchor_to": "top_middle",
+          "controls": [
+            {
+              "button_label@common_buttons_dx.button_label": {
+                "offset": [ 1, -1 ],
+                "color": [ 1.0, 1.0, 1.0 ],
+                "anchor_from": "left_middle",
+                "anchor_to": "left_middle",
+                "size": [ "100%-46px", "default" ],
+                "layer": 10,
+                "shadow": false,
+                "text": "#option_name",
+                "bindings": [
+                  {
+                    "binding_name": "#option_name",
+                    "binding_type": "collection",
+                    "binding_collection_name": "permissions_collection"
+                  }
+                ]
+              }
+            },
+            {
+              "option_toggle_control@permissions.option_toggle": {
+                "size": [ 44, 20 ],
+                "anchor_from": "top_right",
+                "anchor_to": "top_right",
+                "$only_value": true,
+                "$toggle_off_text": "options.off",
+                "$toggle_on_text": "options.on",
+
+                "$toggle_texture_default": "common_buttons_dx.44_default",
+                "$toggle_texture_hover": "common_buttons_dx.44_hover",
+                "$toggle_texture_locked": "common_buttons_dx.44_locked",
+
+                "$unchecked_control": "settings_common_dx.toggle_unchecked",
+                "$checked_control": "settings_common_dx.toggle_checked",
+                "$unchecked_hover_control": "settings_common_dx.toggle_unchecked_hover",
+                "$checked_hover_control": "settings_common_dx.toggle_checked_hover",
+                
+                "$unchecked_locked_control": "settings_common_dx.toggle_unchecked_locked",
+                "$unchecked_locked_hover_control": "settings_common_dx.toggle_unchecked_locked",
+                "$checked_locked_control": "settings_common_dx.toggle_checked_locked",
+                "$checked_locked_hover_control": "settings_common_dx.toggle_checked_locked",
+
+                "$button_content": "settings_common_dx.button_label_with_value"
+              }
+            }
+          ]
+        }
+      },
       {
         "option_toggle@settings_common_dx.option_toggle_alt": {
           "size": [ "100%", 20 ],
@@ -316,8 +417,8 @@
           "$toggle_binding_type": "collection",
           "$toggle_state_binding_name": "#option_toggle_state",
 
-          "$toggle_enabled_binding_type": "global",
-          "$toggle_enabled_binding_name": "#can_edit_permissions",
+          //"$toggle_enabled_binding_type": "global",
+          "$option_enabled_binding_name": "#can_edit_permissions",
     
 					"$toggle_tts_header_binding_type": "collection",
 					"$toggle_tts_header_binding_collection_name": "permissions_collection",
@@ -334,20 +435,8 @@
       }
 		]
 	},
-  
-  "right_scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "size": [ "100%", "100%" ],
-    "anchor_from": "top_left",
-    "anchor_to": "top_left",
-    "$scroll_view_port_size": [ "100%", "100%" ],
-    "$scroll_view_port_size_touch": [ "100%", "100%" ],
-    "$full_middle_panel_offset": [ 0, 0 ],
-    "$full_middle_panel_size": [ "100%", "100%" ],
-    "$scroll_bar_contained": false,
-    "$scrolling_content": "permissions_dx.content_panel"
-  },
 
-  /*////// Main Panel  //////*/
+  /*//// Panels ////*/
   
   "permissions_middle_content": {
     "type": "stack_panel",
@@ -373,9 +462,10 @@
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "$bg_middle": "java_gui_common.options_background_middle",
-          "$middle_content": "permissions_dx.left_scrolling_panel",
+          "$scrolling_content": "permissions_dx.player_list_panel",
           "clips_children": true,
           "$middle_clips_children": true,
+          "$scroll_bar_contained": false,
           "controls": [
             { "middle_panel@common_menus_dx.middle_panel": { "layer": 6 } },
             { "bg@$bg_middle": { "layer": 4 } }
@@ -383,14 +473,13 @@
         }
       },
       {
-        "separator": {
+        "middle_separator": {
           "type": "panel",
           "size": [ 10, "100%" ]
         }
       },
       {
         "object_name@common.modal_area_panel_base": {
-          "type": "panel",
           "size": [ "fill", "100%" ],
           "$menu_cancel_button_id": "button.back_to_selector_area",
           "$modal_binding_name": "#content_area_focused",
@@ -412,7 +501,7 @@
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$bg_middle": "java_gui_common.options_background_middle",
-                "$middle_content": "permissions_dx.right_scrolling_panel",
+                "$scrolling_content": "permissions_dx.content_panel",
                 "clips_children": true,
                 "$middle_clips_children": true,
                 "controls": [
@@ -439,6 +528,8 @@
     ]
   },
 
+  /*////// Screen  //////*/
+
   "permissions_screen_content": {
     "type": "panel",
     "size": [ "100%", "100%" ],
@@ -459,9 +550,30 @@
       },
       { "main_control@permissions_dx.permissions_middle_content": {} },
       {
-        "done_button@common_buttons_dx.main_button": {
+        "done_button@common_buttons_dx.main_button_200": {
           "size": [ 200, 20 ],
-          "$pressed_button_name": "button.menu_exit",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_cancel",
+              "to_button_id": "button.menu_exit",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_exit",
+              "to_button_id": "button.menu_exit",
+              "mapping_type": "global"
+            },
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_exit",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_exit",
+              "mapping_type": "focused"
+            }
+          ],
           "$button_text": "gui.done",
           "anchor_from": "bottom_middle",
           "anchor_to": "bottom_middle",

@@ -2,7 +2,8 @@
   "namespace": "common_scroll_dx",
 
   "scrolling_panel@common.scrolling_panel": {
-    "$scroll_track_image_control": "common_dx.null_panel",
+    "$scroll_track_offset": [ 0, 0 ],
+    "$scroll_track_image_control": "common.empty_panel",
     "$scroll_box_mouse_image_control": "$scroll_box_image_control",
     "$scroll_box_touch_image_control": "$scroll_box_image_control",
     "controls": [
@@ -53,7 +54,7 @@
           "controls": [
             {
               "scrolling_content@$scrolling_content": {
-                "layer": 1,
+                "layer": 2,
                 "$scrolling_content_anchor_from|default": "top_left",
                 "$scrolling_content_anchor_to|default": "top_left",
                 "anchor_from": "$scrolling_content_anchor_from",

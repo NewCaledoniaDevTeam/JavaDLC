@@ -1,10 +1,7 @@
 {
-  "pause_screen": {
-    "$use_loading_bars": false,
-    "$screen_content": "pause_dx.center_screen",
-    "$screen_bg_content": "pause_dx.full_screen",
-    "$screen_animations": [ ],
-    "$background_animations": [ ],
-    "variables": [ ]
-  }
+    "pause_screen": {
+        "$screen_content": "pause_dx.center_screen",
+        "$screen_bg_content": "pause_dx.full_screen",
+        "variables": []
+    }
 }

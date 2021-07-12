@@ -1,7 +1,7 @@
 {
   "namespace": "enchanting_table_java_dx",
 
-  "enchanting_table_base@java_gui_common.crisxolt_image_panel": {
+  "enchanting_table_base@java_gui_common._image_panel": {
     "$texture": "assets/minecraft/textures/gui/container/enchanting_table"
   },
 

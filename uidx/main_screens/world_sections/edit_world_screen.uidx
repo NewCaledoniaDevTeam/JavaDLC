@@ -40,6 +40,9 @@
           "controls": [
             {
               "gamerules_button@create_world_dx.gamerules_button": {
+                "$unchecked_control": "common_buttons_dx.200_default",
+                "$unchecked_hover_control": "common_buttons_dx.200_hover",
+
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
@@ -55,6 +58,9 @@
           "controls": [
             {
               "more_world_options_button@create_world_dx.more_world_options_button": {
+                "$unchecked_control": "common_buttons_dx.200_default",
+                "$unchecked_hover_control": "common_buttons_dx.200_hover",
+
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle"
@@ -75,7 +81,7 @@
           ],
           "controls": [
             {
-              "convert_to_infinite_button@settings_common_dx.action_button": {
+              "convert_to_infinite_button@common_buttons_dx.main_button_200": {
                 "size": [ 200, 20 ],
                 "$pressed_button_name": "convert_to_infinite_button",
                 "$button_text": "createWorldScreen.action.editLocal",
@@ -90,10 +96,10 @@
         "panel_3": {
           "type": "panel",
           "size": [ 202, 24 ],
-          "ignored": "(($pocket_edition or $export_disabled or not $file_picking_supported) and not $education_ios",
+          "ignored": "(($pocket_edition or $export_disabled or not $file_picking_supported) and not $education_edition",
           "controls": [
             {
-              "export_button@settings_common_dx.action_button": {
+              "export_button@common_buttons_dx.main_button_200": {
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -111,6 +117,9 @@
           "controls": [
             {
               "resource_packs_button@create_world_dx.resource_packs_button": {
+                "$unchecked_control": "common_buttons_dx.98_default",
+                "$unchecked_hover_control": "common_buttons_dx.98_hover",
+
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "size": [ 98, 20 ]
@@ -118,6 +127,9 @@
             },
             {
               "behavior_packs_button@create_world_dx.behavior_packs_button": {
+                "$unchecked_control": "common_buttons_dx.98_default",
+                "$unchecked_hover_control": "common_buttons_dx.98_hover",
+
                 "size": [ 98, 20 ],
                 "anchor_from": "top_right",
                 "anchor_to": "top_right"
@@ -133,7 +145,7 @@
           "ignored": "(not $is_world_edit or $is_mp_client or $trial or not $is_pregame or $export_disabled)",
           "controls": [
             {
-              "copy_world_button@settings_common_dx.action_button": {
+              "copy_world_button@common_buttons_dx.main_button_200": {
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -151,7 +163,7 @@
           "ignored": "(not $is_world_edit or $is_mp_client or $trial or not $is_pregame or $export_template_disabled or not $win10_edition)",
           "controls": [
             {
-              "export_template_button@settings_common_dx.action_button": {
+              "export_template_button@common_buttons_dx.main_button_200": {
                 "size": [ 200, 20 ],
                 "anchor_from": "top_middle",
                 "anchor_to": "top_middle",
@@ -168,16 +180,17 @@
           "size": [ 202, 20 ],
           "controls": [
             {
-              "save_button@play_dx.cancel_button": {
+              "save_button@common_buttons_dx.main_button_98": {
                 "anchor_from": "bottom_left",
                 "anchor_to": "bottom_left",
                 "size": [ 98, 20 ],
                 "offset": [ 1, 0 ],
+                "$pressed_button_name": "button.menu_exit",
                 "$button_text": "addExternalServerScreen.saveButtonLabel"
               }
             },
             {
-              "delete_button@settings_common_dx.action_button": {
+              "delete_button@common_buttons_dx.main_button_98": {
                 "size": [ 98, 20 ],
                 "anchor_from": "bottom_right",
                 "anchor_to": "bottom_right",

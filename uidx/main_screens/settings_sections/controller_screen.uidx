@@ -1,3 +1,5 @@
+/*File made by @CrisXolt.
+//(c) Don't use any code design without permission!*/
 {
   "namespace": "gamepad_dx",
 
@@ -15,6 +17,8 @@
 
   "main_options_button@settings_dx.button_tab": {
     "size": [ 200, 20 ],
+    "$unchecked_control": "common_buttons_dx.200_default",
+    "$unchecked_hover_control": "common_buttons_dx.200_hover",
     "$button_text": "gui.done",
     "$is_back_button": true,
     "anchor_from": "bottom_middle",
@@ -90,8 +94,7 @@
         }
       },
       {
-        "keymapping_button_0@common_buttons_dx.main_button": {
-          "size": [ 74, 20 ],
+        "keymapping_button_0@common_buttons_dx.main_button_74": {
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "offset": [ -90, 0 ],
@@ -106,8 +109,7 @@
         }
       },
       {
-        "keymapping_button_1@common_buttons_dx.main_button": {
-          "size": [ 50, 20 ],
+        "keymapping_button_1@common_buttons_dx.main_button_50": {
           "anchor_from": "right_middle",
           "anchor_to": "right_middle",
           "offset": [ -30, 0 ],
@@ -187,8 +189,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "option_slider_0@settings_common_dx.option_slider": {
-                "size": [ 150, 20 ],
+              "option_slider_0@settings_common_dx.option_slider_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "#controller_sensitivity_slider_label",
@@ -200,8 +201,7 @@
               }
             },
             {
-              "option_toggle_0@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle_0@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "$option_label": "options.invertYAxis",
@@ -219,8 +219,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "option_toggle9@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle9@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "options.hidetooltips",
@@ -230,8 +229,7 @@
               }
             },
             {
-              "option_toggle10@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle10@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "$option_label": "options.hidegamepadcursor",
@@ -249,8 +247,7 @@
           "size": [ 310, 25 ],
           "controls": [
             {
-              "gamepad_swap_ab@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "gamepad_swap_ab@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_left",
                 "anchor_to": "top_left",
                 "$option_label": "options.swapGamepadAB",
@@ -260,8 +257,7 @@
               }
             },
             {
-              "gamepad_swap_xy@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "gamepad_swap_xy@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "$option_label": "options.swapGamepadXY",
@@ -276,27 +272,17 @@
     ]
   },
 
-  /*//// Scrolling Panel ////*/
-  
-  "controller_scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "$scroll_view_port_size": [ 336, "100%" ],
-    "layer": 2,
-    "$scrolling_content": "gamepad_dx.controller_stack_panel"
-  },
-
-  "more_scrolling_panel@common_menus_dx.java_menu_scroll_panel": {
-    "$scroll_view_port_size": [ 324, "100%" ],
-    "layer": 2,
-    "$scrolling_content": "gamepad_dx.more_stack_panel"
-  },
-
   /*//// Screen ////*/
   
   "controller_screen_panel": {
     "type": "panel",
     "controls": [
       {
-        "main_screen_panel@gamepad_dx.main_screen_panel": {
+        "main@common_menus_dx.java_edition_menu_panel_template": {
+          "$top_content": "gamepad_dx.controller_top_content",
+          "$top_content_size": [ "100%", 43 ],
+          "$scrolling_content": "gamepad_dx.controller_stack_panel",
+          "$bottom_content": "gamepad_dx.controller_bottom_content",
           "bindings": [
             {
               "binding_type": "view",
@@ -308,7 +294,11 @@
         }
       },
       {
-        "more_screen_panel@gamepad_dx.more_screen_panel": {
+        "more@common_menus_dx.java_edition_menu_panel_template": {
+          "$top_content": "gamepad_dx.more_label",
+          "$top_content_size": [ "100%", 32 ],
+          "$scrolling_content": "gamepad_dx.more_stack_panel",
+          "$bottom_content": "gamepad_dx.main_options_button",
           "bindings": [
             {
               "binding_type": "view",
@@ -320,25 +310,6 @@
         }
       }
     ]
-  },
-
-  "main_screen_panel@common_menus_dx.java_menu_panel_template": {
-    "$top_content": "gamepad_dx.controller_top_content",
-    "$top_content_size": [ "100%", 43 ],
-    "$middle_content": "gamepad_dx.controller_scrolling_panel",
-    "$bottom_content": "gamepad_dx.controller_bottom_content"
-  },
-
-  "more_screen_panel@common_menus_dx.java_menu_panel_template": {
-    "$top_content": "gamepad_dx.more_label",
-    "$top_content_size": [ "100%", 32 ],
-    "$middle_content": "gamepad_dx.more_scrolling_panel",
-    "$bottom_content": "gamepad_dx.main_options_button"
-  },
-
-  "more_label@settings_dx.base_label": {
-    "text": "options.controllerSettings",
-    "offset": [ 0, 4 ]
   },
 
   "controller_top_content": {
@@ -363,8 +334,7 @@
           "controls": [
             { "more_options_button@gamepad_dx.more_options_button": {} },
             {
-              "option_toggle_1@settings_common_dx.option_toggle": {
-                "size": [ 150, 20 ],
+              "option_toggle_1@settings_common_dx.option_toggle_150": {
                 "anchor_from": "top_right",
                 "anchor_to": "top_right",
                 "$option_label": "options.autojump",
@@ -387,8 +357,7 @@
     "size": [ 310, 20 ],
     "controls": [
       {
-        "reset_button@settings_common_dx.action_button": {
-          "size": [ 150, 20 ],
+        "reset_button@common_buttons_dx.main_button_150": {
           "anchor_from": "top_left",
           "anchor_to": "top_left",
           "$pressed_button_name": "button.reset_gamepad_bindings",
@@ -403,5 +372,10 @@
         }
       }
     ]
+  },
+
+  "more_label@settings_dx.base_label": {
+    "text": "options.controllerSettings",
+    "offset": [ 0, 4 ]
   }
 }
